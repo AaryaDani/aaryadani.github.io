@@ -218,3 +218,14 @@ module:
   imports:
     - path: github.com/google/docsy
       disable: false
+
+menu:
+  main:
+    - identifier: current
+      name: "Current Version"
+      url: "/"
+      weight: 1
+    - identifier: old-version
+      name: "Old Version"
+      url: "/old-version/"
+      weight: 2
