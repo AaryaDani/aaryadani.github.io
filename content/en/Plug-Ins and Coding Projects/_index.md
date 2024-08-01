@@ -8,8 +8,6 @@ description: >
 menu: {main: {weight: 50}}
 cascade:
   - type: "docs"
-no_list: true
 ---
 
-Content.
   
