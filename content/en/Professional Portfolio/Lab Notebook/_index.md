@@ -4,6 +4,7 @@ type: docs
 weight: 20
 cascade:
   - type: "docs"
+description: >
+  Physics is a fascinating subject, with a variety of differing concepts that affect the world that we live in. I conducted 14 separate labs in order to dissect the underlying mechanics of how the world works.
 ---
 
-I conducted certain labs regarding principles from Physics 2. Here, I wrote a detailed lab report, showcasing multiple experiments, results, and analysis of said results. Check them out!

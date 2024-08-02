@@ -10,6 +10,8 @@ resources:
       byline: 
 cascade:
   - type: "docs"
+description: > 
+  The Eisenhower Matrix is a task management tool that helps you organize and prioritize tasks by urgency and importance. 
 ---
 
 ## The Eisenhower Method
