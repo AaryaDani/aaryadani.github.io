@@ -8,3 +8,4 @@ cascade:
   - type: "docs"
 ---
 
+<img src="/images/J&J%20Picture.jpeg" alt="Alt text" style="width:25%;"/>
