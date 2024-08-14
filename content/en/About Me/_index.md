@@ -130,9 +130,8 @@ no_list: true
             February 2024 – May 2024<br>
             • Conducted experiments for cell culture, electrospinning, biomaterial testing, immunolabeling, fluorescence imaging, and image processing<br>
             • Used FlexCell to observe biochemical changes, cell migration and signaling under fluid shear load in vitro<br>
-            • Managed and analyzed patient heart condition data, categorizing over 200 cases based on medical history and prior cardiac issues 
-            <br>
-            <br>
+            • Managed and analyzed patient heart condition data, categorizing over 200 cases based on medical history and prior cardiac issues<br>
+            <br> <br> 
           </p>
         </div>
       </div>
@@ -147,7 +146,7 @@ no_list: true
             March 2022 – August 2023<br>
             • Coached over 100 hours for children ages 5-13, designing and overseeing swim practices<br>
             • Organized and led 10+ swim meets and fundraising events, enhancing community engagement and club visibility<br>
-<br> <br>                                      <br> <br>
+<br> <br>                                      <br> <br><br>
             <br><br><br>
           </p>
         </div>
