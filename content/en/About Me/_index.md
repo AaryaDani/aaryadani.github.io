@@ -191,8 +191,8 @@ no_list: true
           </div>
           <p class="section-text">
             September 2016 – August 2023<br>
-            • Guided Indian cultural events at a Sunday School. Narrated 80+ videos on YouTube to educate students
-            <br> <br>
+            • Guided Indian cultural events at a local Sunday School. Narrated 80+ videos on YouTube to educate students. 
+            <br> 
             <br> 
           </p>
         </div>
