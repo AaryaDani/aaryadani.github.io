@@ -9,3 +9,6 @@ cascade:
 ---
 
 <img src="/images/J&J-Picture.png" alt="Alt text" style="width:25%;"/>
+
+
+![J&J Picture]](/images/J&J-Picture.png)
