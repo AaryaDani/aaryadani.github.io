@@ -3,7 +3,7 @@ title: Data Table
 description: >
   Here is a searchable table displaying different speeds of cars:
 date: 2017-01-05
-weight: 3
+weight: 4
 cascade:
   - type: "docs"
 ---

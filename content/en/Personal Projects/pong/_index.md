@@ -3,7 +3,7 @@ title: Pong
 description: >
   This is a embedded game of Pong, one of the oldest computer games. This is fully coded & embedded in this personal site.
 date: 2024
-weight: 1
+weight: 3
 cascade:
   - type: "docs"
 ---

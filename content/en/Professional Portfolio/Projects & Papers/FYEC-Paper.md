@@ -12,6 +12,7 @@ resources:
       byline: 
 cascade:
   - type: "docs"
+weight: 1
 ---
 
 <style>
