@@ -3,7 +3,7 @@ date: 2024-06-14
 title: Lab Notebook 2
 linkTitle: Lab Notebook 2
 description: >
-  I wanted to test certain concepts in Physics 2, and I decided to write a lab report on these certain experiments. Check them out!
+  This section of my lab notebook refers to the second set of experiments that I conducted for Physics 2. These experiments were primarilly related to circuits, magnetism, and currents.
 author: Aarya Dani 
 resources:
   - src: 
@@ -13,8 +13,6 @@ resources:
 cascade:
   - type: "docs"
 ---
-
-# Laboratory Notebook 2
 
 **Laboratory Notebook Index**
 

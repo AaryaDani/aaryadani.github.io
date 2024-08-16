@@ -2,20 +2,12 @@
 date: 2024-06-14
 title: Eisenhower Method
 linkTitle: Eisenhower Method
-author: Aarya Dani 
 weight: 10
-resources:
-  - src: 
-    title: 
-    params:
-      byline: 
 cascade:
   - type: "docs"
 description: > 
   The Eisenhower Matrix is a task management tool that helps you organize and prioritize tasks by urgency and importance. Although this was one small part of a conversation that I had on my first day, I implemented it countless times during my internship.
 ---
-
-## The Eisenhower Method
 
 The Eisenhower Method, also known as the Eisenhower Matrix or Urgent-Important Matrix, is a time management tool popularized by Dwight D. Eisenhower, the 34th President of the United States. This method helps individuals prioritize tasks based on their urgency and importance, leading to more effective and efficient use of time.
 

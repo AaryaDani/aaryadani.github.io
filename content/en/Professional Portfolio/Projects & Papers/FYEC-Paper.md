@@ -3,7 +3,7 @@ date: 2024-04-06
 title: The Use of Artificial Intelligence in Waste Management
 linkTitle: AI in Waste Management
 description: >
-  In the spring semester of my freshman year, I collaborated with two of my peers on a paper regarding the usage of artificial intelligence in waste management. We presented this paper in a conference dedicated to first year engineering students. View the paper here: 
+  In the spring semester of my freshman year, I collaborated with two of my peers on a paper regarding the usage of artificial intelligence in waste management. We presented this paper in a conference dedicated to first year engineering students. 
 author: Aarya Dani 
 resources:
   - src: 

@@ -14,8 +14,6 @@ description: >
   CARVYKTI® is a kind of therapy called CAR-T—which stands for chimeric antigen receptor-T cell. T cells are a part of your immune system that fight against infection. CARVYKTI® works by changing your own T cells to recognize and attack a target on the surface of multiple myeloma cells and certain other healthy cells after a single infusion. The entire process generally takes about 2 to 3 months.
 ---
 
-## Carvykti (Ciltacabtagene Autoleucel)
-
 Carvykti, also known as ciltacabtagene autoleucel, is a cutting-edge immunotherapy treatment designed for patients with multiple myeloma, a type of blood cancer. It is a form of CAR-T (Chimeric Antigen Receptor T-cell) therapy, which involves genetically modifying a patient's T-cells to target and destroy cancer cells.
 
 ### Key Components of Carvykti Therapy:

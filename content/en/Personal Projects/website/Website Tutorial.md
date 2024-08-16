@@ -15,11 +15,21 @@ cascade:
 
 Go to the [Docsy: Before You Begin](https://www.docsy.dev/docs/get-started/docsy-as-module/installation-prerequisites/) page to download the necessary prerequisites.
 
+Here are the major steps if the docsy.dev site is unclear:
+
+1. Install Go - download at https://go.dev/dl/
+2. In CMD type - type winget install Hugo.Hugo.Extended
+3. Check if you have git installed (git version). If not, get it from https://git-scm.com/
+4. Install: npm install -D autoprefixer
+            npm install -D postcss-cli
+            npm install -D postcss
+5. Run node -v. If you need to install a new version, install https://nodejs.org/en/about/previous-releases 
+
 ---
 
 ## Step 2: Run Your Website Locally
 
-Go to the [Docsy example-site repository](https://github.com/google/docsy-example) and click “Use this template” to create your own Docsy repository. Clone your repository into VS Code or any other IDE. Open the terminal in the root folder of your project and run:
+Go to the [Docsy example-site repository](https://github.com/google/docsy-example) and click “Use this template” to create your own Docsy repository. Click the "code" button and copy it. Clone your repository into VS Code or any other IDE. Open the terminal in the root folder of your project and run:
 
 hugo server
 
