@@ -20,9 +20,7 @@ Here are the major steps if the docsy.dev site is unclear:
 1. Install Go - download at https://go.dev/dl/
 2. In CMD type - type winget install Hugo.Hugo.Extended
 3. Check if you have git installed (git version). If not, get it from https://git-scm.com/
-4. Install: npm install -D autoprefixer
-            npm install -D postcss-cli
-            npm install -D postcss
+4. Install npm install -D autoprefixer, npm install -D postcss-cli, and npm install -D postcss
 5. Run node -v. If you need to install a new version, install https://nodejs.org/en/about/previous-releases 
 
 ---
