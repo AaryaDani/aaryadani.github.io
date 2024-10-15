@@ -46,9 +46,6 @@ title: Aarya Dani
       <a class="btn btn-lg btn-social me-3 mb-4 btn-linkedin" href="https://www.linkedin.com/in/aarya-dani-82413b287/" target="_blank">
         <i class="fab fa-linkedin-in"></i>
       </a>
-      <a class="btn btn-lg btn-social me-3 mb-4 btn-instagram" href="https://www.instagram.com/_aaryadani/" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
       <a class="btn btn-lg btn-social me-3 mb-4 btn-youtube" href="https://www.youtube.com/@vrajvaishnavkendrasoutheas6099" target="_blank">
         <i class="fab fa-youtube"></i>
       </a>
