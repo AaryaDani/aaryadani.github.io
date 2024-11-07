@@ -14,15 +14,17 @@ Today, we’re leveraging the powerful integration of Roboflow's data services a
 
 
 ## Step 1: Setting Up Roboflow and YOLO
-First, ensure that you have the required libraries installed. You’ll need:
+First, ensure that you have the required libraries installed. 
 
--Ultralytics YOLO for the YOLOv8 model
-
--OpenCV for image processing and displaying the live video feed
-
--Roboflow SDK for accessing your custom dataset
-
--Roboflow account 
+1. Install Python: Ensure you have Python 3.6 or later installed on your machine. You can download it from python.org. Python 3.13 is not currently supported with PyTorch at this time.
+2. Install the necessary Python libraries using pip. Open a terminal or command prompt and run the following command: pip install ultralytics opencv-python-headless roboflow
+3. Set Up Roboflow API Access. 
+Create a Roboflow Account: Go to Roboflow and sign up for an account if you don’t already have one.
+Create a Project in Roboflow: After signing in, create a project and upload your dataset. Make sure to annotate the images and prepare the dataset for object detection.
+Get Your API Key: You’ll find your API key in the Roboflow dashboard under Settings > API.
+4. Download the YOLOv8 Model Weights 
+The script assumes you’re using the YOLOv8 small model (yolov8s.pt). You can download this directly from Ultralytics, or if you already have the weights, ensure they are in the same directory as the script.
+To use a different YOLOv8 model (e.g., YOLOv8n for a faster but lighter model), replace "yolov8s.pt" in the script with the name of the model you want to use.
 
 ## Step 2: Run the script
 
