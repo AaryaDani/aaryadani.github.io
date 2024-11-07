@@ -10,7 +10,7 @@ cascade:
 
 Today, we’re leveraging the powerful integration of Roboflow's data services and YOLO’s robust object detection capabilities. This setup allows you to detect various objects in a video stream, such as a live webcam feed, and visualize the detections in real time.
 
-![Aarya & Varun](/images/Monkeys.png)
+![Aarya & Varun](/images/racist.png)
 
 
 ## Step 1: Setting Up Roboflow and YOLO
