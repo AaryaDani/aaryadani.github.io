@@ -36,9 +36,9 @@ title: Aarya Dani
 </head>
 
 {{< blocks/cover title="Aarya Dani" image_anchor="top" height="full" >}}
-<p class="lead mt-5">Hello, I am Aarya Dani. I attend the University of Pittsburgh, currently studying chemical engineering. In addition, I have a strong interest on bioengineering, aiming to enhance the affordability and accessibility of medical products. Over the years, I have cultivated expertise in data science and biotechnology. Currently at Johnson & Johnson, I leverage my skills to develop Hugo websites that effectively showcase diverse datasets. Drawing from my engineering background, I am passionate about bridging the gap between engineering principles, data science insights, user requirements, and cutting-edge technology.</p>
+<p class="lead mt-5">Hello, I am Aarya Dani. I currently attend the University of Pittsburgh, currently studying chemical engineering. I recently completed an internship at Johnson & Johnson, where I leveraged my skills to develop Hugo websites that effectively showcase diverse datasets. Drawing from my engineering background, I am passionate about bridging the gap between engineering principles, data science insights, user requirements, and cutting-edge technology. Currently at Merck in their Vaccine Manufacturing Co-Op program, I hope to apply these skills in my future work. </p>
 
-<p>Here is some of my social media:</p>
+<p>Here is some of my contact information:</p>
 
 <div class="container">
   <div class="row">

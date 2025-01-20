@@ -109,13 +109,16 @@ no_list: true
         <h4 class="section-title">Work Experience</h4>
           <div class="card-header-custom">
             <i class="fas fa-database"></i>
-            <h4 class="section-text-bold">Data Science Intern, Johnson & Johnson</h4>
+            <h4 class="section-text-bold">Data Engineering Intern, Johnson & Johnson</h4>
           </div>
           <p class="section-text">
             June 2024 – August 2024<br>
-            • Collaborated with Quality & Compliance team to develop a data dictionary for over 40 datasets as part of the Generic Analytics Modeling Engines (GAMEs) platform<br>
-            • Converted over 5,000 source files using an automated R script, making them compatible with the Docsy & Hugo template for web access and improving UX/UI<br>
-            • Refactored and tested R code to support commercially launched products and improve performance, enhance readability, and ensure accurate results using Agile Software development
+            • Collaborated with Quality & Compliance team to develop a data dictionary for over 40 unique drug products<br>
+            • Converted over 15,000 source files using an automated R script, improving build time by over 50%<br>
+            • Refactored and tested R code to support commercially launched products and improve performance<br>
+            <br>
+            <br>
+            <br>
           </p>
         </div>
       </div>
@@ -124,14 +127,13 @@ no_list: true
         <h4 class="section-title">Work Experience</h4>
           <div class="card-header-custom">
             <i class="fas fa-flask"></i>
-            <h4 class="section-text-bold">Undergraduate Research Assistant, University of Pittsburgh</h4>
+            <h4 class="section-text-bold">Cardiovascular Research Assistant, University of Pittsburgh</h4>
           </div>
           <p class="section-text">
             February 2024 – May 2024<br>
-            • Conducted experiments for cell culture, electrospinning, biomaterial testing, immunolabeling, fluorescence imaging, and image processing<br>
+            • Conducted experiments for cell culture, immunolabeling, fluorescence imaging, and image processing<br>
             • Used FlexCell to observe biochemical changes, cell migration and signaling under fluid shear load in vitro<br>
-            • Managed and analyzed patient heart condition data, categorizing over 200 cases based on medical history and prior cardiac issues<br>
-            <br> <br> 
+            • Managed and analyzed patient heart condition data, categorizing over 200 cases based on medical history<br>
           </p>
         </div>
       </div>
@@ -146,8 +148,9 @@ no_list: true
             March 2022 – August 2023<br>
             • Coached over 100 hours for children ages 5-13, designing and overseeing swim practices<br>
             • Organized and led 10+ swim meets and fundraising events, enhancing community engagement and club visibility<br>
-<br> <br>                                      <br> <br><br>
-            <br><br><br>
+            • Created personalized training plans for 4 distinct groups, enhancing swimmer performance by 20%<br>
+            <br>
+            <br>
           </p>
         </div>
       </div>
@@ -158,27 +161,12 @@ no_list: true
         <div class="feature-card">
         <h4 class="section-title">Leadership Experience</h4>
           <div class="card-header-custom">
-            <i class="fas fa-user-shield"></i>
-            <h4 class="section-text-bold">Vice President, Delta Tau Delta</h4>
-          </div>
-          <p class="section-text">
-            February 2024 – Present<br>
-            • Developed and managed a calendar of activities and events for the chapter, facilitating over 20 events per semester and ensuring efficient planning and execution
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="feature-card">
-        <h4 class="section-title">Leadership Experience</h4>
-          <div class="card-header-custom">
             <i class="fas fa-bullhorn"></i>
-            <h4 class="section-text-bold">Opportunities Chair, SACNAS</h4>
+            <h4 class="section-text-bold">Opportunities Chair, Society for Advancement of Chicanos/Hispanics & Native Americans in Science</h4>
           </div>
           <p class="section-text">
             August 2023 – Present<br>
             • Coordinated 15+ events providing research opportunities and professional development for undergraduate students
-            <br>
-            <br>
           </p>
         </div>
       </div>
@@ -187,15 +175,34 @@ no_list: true
         <h4 class="section-title">Leadership Experience</h4>
           <div class="card-header-custom">
             <i class="fas fa-chalkboard-teacher"></i>
-            <h4 class="section-text-bold">Teacher, Vraj Vaishnav Kendra</h4>
+            <h4 class="section-text-bold">Representative, American Institute of Chemical Engineers</h4>
           </div>
           <p class="section-text">
-            September 2016 – August 2023<br>
-            • Guided Indian cultural events at a local Sunday School. Narrated 80+ videos on YouTube to educate students. 
-            <br> 
-            <br> 
+            August 2024 – Present<br>
+            • Provided feedback for several professional development events, ensuring collaboration between members  
+            <br>
+            <br>
+            <br>
           </p>
         </div>
+      </div>
+        <div class="col-lg-4">
+        <div class="feature-card">
+        <h4 class="section-title">Leadership Experience</h4>
+          <div class="card-header-custom">
+            <i class="fas fa-user-shield"></i>
+            <h4 class="section-text-bold">Vice President, Delta Tau Delta</h4>
+          </div>
+          <p class="section-text">
+            February 2024 – September 2024<br>
+            • Developed and managed a calendar of activities and events for the chapter, facilitating over 20 events per semester and ensuring efficient planning and execution
+            <br>
+            <br>
+            <br>
+            <br>
+          </p>
+        </div>
+      </div>
       </div>
     </div>
     <!-- Other Sections -->
@@ -212,6 +219,9 @@ no_list: true
             <p><strong>First Year Engineering Conference</strong><br>
             January 2024 – April 2024<br>
             • Authored and delivered a scholarly paper in collaboration with two fellow students, elucidating the application of artificial intelligence within the realm of waste management, with a specific focus on enhancing sustainability practices</p>
+            <p><strong>Engineering Sustainability Project | C++ </strong><br>
+            March 2024 – April 2024<br>
+            • Developed a program featuring quiz-based learning on paper topics, a user-authenticated sustainability game, and an interactive explanation of neural network operations
           </div>
         </div>
       </div>
@@ -223,8 +233,10 @@ no_list: true
             <h4 class="section-text-bold">Technical Skills</h4>
           </div>
           <div class="section-content">
-            <p><strong>Systems & Applications:</strong> C++, MATLAB, Python, R, Hugo, Jira, BitBucket, Terminal, Microsoft Office<br>
-            <strong>Laboratory Skills:</strong> ELISA, Western Blotting, Southern Blotting, Gram Staining & Cloning, Mammalian Cell Culture, CRISPR gene editing, 3-D Printing, Polymerase Chain Reaction (PCR), Fluorescence Microscopy</p>
+            <p><strong>Systems & Applications:</strong> C++, MATLAB, R, Hugo, Jira, BitBucket, Terminal, ASPEN, Microsoft Office<br>
+            <strong>Laboratory Skills:</strong> ELISA, Western Blotting, Southern Blotting, Gram Staining & Cloning, Mammalian Cell Culture, CRISPR gene editing, 3-D Printing, Polymerase Chain Reaction (PCR), Fluorescence Microscopye<br>
+             <strong>Laboratory Certifications:</strong> OSHA, CPR, CITI Program, SAChE Certificate Program
+            </p>
           </div>
         </div>
       </div>
