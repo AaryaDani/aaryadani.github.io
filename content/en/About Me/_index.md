@@ -234,7 +234,7 @@ no_list: true
           </div>
           <div class="section-content">
             <p><strong>Systems & Applications:</strong> C++, MATLAB, R, Hugo, Jira, BitBucket, Terminal, ASPEN, Microsoft Office<br>
-            <strong>Laboratory Skills:</strong> ELISA, Western Blotting, Southern Blotting, Gram Staining & Cloning, Mammalian Cell Culture, CRISPR gene editing, 3-D Printing, Polymerase Chain Reaction (PCR), Fluorescence Microscopye<br>
+            <strong>Laboratory Skills:</strong> ELISA, Western Blotting, Southern Blotting, Gram Staining & Cloning, Mammalian Cell Culture, CRISPR gene editing, 3-D Printing, Polymerase Chain Reaction (PCR), Fluorescence Microscopy<br>
              <strong>Laboratory Certifications:</strong> OSHA, CPR, CITI Program, SAChE Certificate Program
             </p>
           </div>
