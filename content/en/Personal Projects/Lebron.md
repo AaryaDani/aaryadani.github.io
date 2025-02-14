@@ -2,7 +2,7 @@
 title: LeBron Simulator
 linkTitle: LeBron Simulator
 description: >
-  Help LeBron!
+  Help LeBron get to the NBA finals!
 date: 2017-01-05
 weight: 1
 cascade:
