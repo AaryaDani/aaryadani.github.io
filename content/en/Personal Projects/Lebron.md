@@ -1,0 +1,12 @@
+---
+title: LeBron Simulator
+linkTitle: LeBron Simulator
+description: >
+  Help LeBron!
+date: 2017-01-05
+weight: 1
+cascade:
+  - type: "docs"
+---
+
+<iframe width="560" height="315" allow="fullscreen; autoplay; encrypted-media" src="https://games.construct.net/47590/latest" frameborder="0" allowfullscreen="true" msallowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" allowpaymentrequest="false" referrerpolicy="unsafe-url" sandbox="allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups" scrolling="no"></iframe>
