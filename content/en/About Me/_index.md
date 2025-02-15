@@ -8,7 +8,6 @@ cascade:
 no_list: true
 ---
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,6 +79,12 @@ no_list: true
     .section-content a:hover {
       text-decoration: underline;
     }
+    .profile-pic {
+      width: 200px; /* Set the width to 300px */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 0%;
+      margin-right: 20px;
+    }
   </style>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
@@ -90,14 +95,17 @@ no_list: true
       <div class="col-lg-12">
         <div class="feature-card">
           <div class="card-header-custom">
-            <h4 class="section-text-bold">Contact Information & Education</h4>
-          </div>
-          <div class="section-content">
-            <p>Aarya Dani<br>
-            <a href="mailto:AND321@pitt.edu">AND321@pitt.edu</a> | <a href="https://www.linkedin.com/in/aarya-dani" target="_blank">linkedin.com/in/aarya-dani</a> | <a href="https://aaryadani.github.io/" target="_blank">https://aaryadani.github.io/</a></p>
-            <p><strong>University of Pittsburgh - Frederick Honors Program, Pittsburgh, PA</strong><br>
-            Bachelor of Science in Chemical Engineering, August 2023 – Present<br>
-            Relevant Coursework: Honors Calculus 1 & 2, Honors Physics 1, General Chemistry 1 & 2</p>
+            <img src="/images/Aarya.jpeg" alt="Aarya Dani" class="profile-pic">
+            <div>
+              <h4 class="section-text-bold">Contact Information & Education</h4>
+              <div class="section-content">
+                <p>Aarya Dani<br>
+                <a href="mailto:AND321@pitt.edu">AND321@pitt.edu</a> | <a href="https://www.linkedin.com/in/aarya-dani" target="_blank">linkedin.com/in/aarya-dani</a> | <a href="https://aaryadani.github.io/" target="_blank">https://aaryadani.github.io/</a></p>
+                <p><strong>University of Pittsburgh - Frederick Honors Program, Pittsburgh, PA</strong><br>
+                Bachelor of Science in Chemical Engineering, August 2023 – Present<br>
+                Relevant Coursework: Honors Calculus 1 & 2, Honors Physics 1, General Chemistry 1 & 2</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -211,6 +219,8 @@ no_list: true
         <div class="feature-card">
           <div class="card-header-custom">
             <h4 class="section-text-bold">Projects and Publications</h4>
+          </div>
+          <div class="section-content">
           </div>
           <div class="section-content">
             <p><strong>Personal Website | Hugo, HTML, Python, Git</strong><br>

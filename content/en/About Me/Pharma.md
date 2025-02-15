@@ -1,8 +1,4 @@
----
-title: "Pharmaceutical Industry"
-date: "2024-10-22"
-description: "An overview of the pharmaceutical industry's future trends."
----
+
 
 **Pharmaceutical Purgatory: The Issue with Price Gouging**
 

@@ -1,12 +1,3 @@
----
-title: Engineering Strengths
-description: What are some of the pros and cons of engineering?
-date: 2017-01-05
-weight: 3
-cascade:
-  - type: "docs"
----
-
 Engineering is not only one of the most sought-after and respected majors but also a field that demands a specific set of skills for success. In this context, I aim to highlight the essential skills that a chemical engineer must possess to excel in their career and illustrate how I have demonstrated these strengths in various aspects of my life.
 Analyzing data is a critical skill for chemical engineers. As highlighted in the description of chemical engineering by the University of Washington, “Chemical engineers employ and design data science methods to visualize, analyze and predict chemical and biological properties. Data is obtained in a multitude of ways, ranging from high throughput instrumentation, gene sequencers, to computational simulations.” 
 

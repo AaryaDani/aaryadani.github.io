@@ -1,11 +1,3 @@
----
-title: Overview
-description: Here's where I tell my story about why I chose Pitt.
-weight: 1
-cascade:
-  - type: "docs"
----
-
 Selecting a college was a significant and, at times, daunting decision for me. Amidst the array of choices, the University of Pittsburgh’s Swanson School of Engineering emerged as a well-rounded option that truly resonated with my aspirations. Multiple factors, including the environment, education, research, and advice from former alumni led me to choose the SSOE. 
 
 Cities have always held a special allure for me – the bustling energy, architectural splendor, and diverse tapestry of inhabitants. Simultaneously, I yearned for the quintessential college campus experience, where collaborative studying and shared activities thrive. Fortunately, Pitt offers the best of both worlds, nestled within an urban setting while boasting a welcoming campus.

@@ -1,12 +1,3 @@
----
-title: Tic Tac Toe 
-description: >
-  Here is a game of Tic Tac Toe I created in Python.
-weight: 2
-cascade:
-  - type: "docs"
----
-
 ```yaml
 import random
 

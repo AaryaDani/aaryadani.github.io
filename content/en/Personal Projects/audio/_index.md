@@ -1,13 +1,3 @@
----
-title: Audio
-description: >
-  Here are some of the beats I produced in my free time. Check them out!
-date: 2017-01-05
-weight: 5
-cascade:
-  - type: "docs"
----
-
 <iframe width="560" height="202" src="https://www.bandlab.com/embed/?id=2ba66c63-08f6-ee11-aaf0-000d3aa5105b" allowfullscreen></iframe>
 <iframe width="560" height="202" src="https://www.bandlab.com/embed/?id=87422082-9881-ed11-9d7a-000d3a3eed2a" allowfullscreen></iframe>
 <iframe width="560" height="202" src="https://www.bandlab.com/embed/?id=f40a38ee-9a81-ed11-9d7a-000d3a3eed2a" allowfullscreen></iframe>
