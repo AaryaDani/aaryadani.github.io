@@ -48,6 +48,8 @@ title: Aarya Dani
       transition: opacity 0.5s ease;
       background-color: #e2e2e2;
       padding: 20px;
+      margin: 0; /* Remove margin */
+      width: 100%; /* Ensure full width */
     }
     #lead-down {
       position: fixed;
@@ -65,6 +67,7 @@ title: Aarya Dani
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
+      width: 100%; /* Ensure full width */
     }
     .project-item {
       flex: 1 1 calc(50% - 20px); /* Two items per row with gap */
@@ -130,6 +133,8 @@ title: Aarya Dani
     </div>
   </div>
 </div>
+
+<div class="footer" id="footer">
 
 <script>
   document.getElementById('lead-down').addEventListener('click', function() {
