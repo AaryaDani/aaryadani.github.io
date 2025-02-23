@@ -24,7 +24,8 @@ no_list: true
       display: flex;
       flex-wrap: wrap;
       margin: -10px;
-    }
+      align-items: stretch; /* Ensures all columns stretch to the same height */
+    } 
     .col-lg-12, .col-lg-4 {
       padding: 10px;
       box-sizing: border-box;
@@ -34,6 +35,8 @@ no_list: true
     }
     .col-lg-4 {
       flex: 0 0 33.3333%;
+      display: flex;
+      flex-direction: column;
     }
     .feature-card {
       border: 1px solid #ddd;
@@ -41,6 +44,10 @@ no_list: true
       padding: 20px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%; /* Ensures all cards have the same height */
     }
     .card-header-custom {
       display: flex;
@@ -80,7 +87,7 @@ no_list: true
       text-decoration: underline;
     }
     .profile-pic {
-      width: 200px; /* Set the width to 300px */
+      width: 200px; /* Set the width to 200px */
       height: auto; /* Maintain aspect ratio */
       border-radius: 0%;
       margin-right: 20px;
@@ -110,55 +117,49 @@ no_list: true
         </div>
       </div>
     </div>
-    <!-- Work Experience -->
     <div class="row">
       <div class="col-lg-4">
         <div class="feature-card">
-        <h4 class="section-title">Work Experience</h4>
+          <h4 class="section-title">Work Experience</h4>
+          <div class="card-header-custom">
+            <i class="fas fa-vaccine"></i>
+            <h4 class="section-text-bold">Vaccine Manufacturing Co-op, Merck Sharp & Dohme</h4>
+          </div>
+          <p class="section-text">
+            May 2025 – August 2025<br>
+            • Supported vaccine manufacturing by troubleshooting operational issues, ensuring GMP compliance.<br>
+            • Led deviation investigations to identify root causes and implement corrective actions.<br>
+            • Drove process improvements using Lean Six Sigma, enhancing yield and reducing cycle times.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature-card">
+          <h4 class="section-title">Work Experience</h4>
           <div class="card-header-custom">
             <i class="fas fa-database"></i>
             <h4 class="section-text-bold">Data Engineering Intern, Johnson & Johnson</h4>
           </div>
           <p class="section-text">
             June 2024 – August 2024<br>
-            • Collaborated with Quality & Compliance team to develop a data dictionary for over 40 unique drug products<br>
-            • Converted over 15,000 source files using an automated R script, improving build time by over 50%<br>
-            • Refactored and tested R code to support commercially launched products and improve performance<br>
-            <br>
-            <br>
-            <br>
+            • Collaborated with Quality & Compliance team to develop a data dictionary for over 40 unique drug products.<br>
+            • Converted over 15,000 source files using an automated R script, improving build time by over 50%.<br>
+            • Refactored and tested R code to support commercially launched products and improve performance.
           </p>
         </div>
       </div>
       <div class="col-lg-4">
         <div class="feature-card">
-        <h4 class="section-title">Work Experience</h4>
+          <h4 class="section-title">Work Experience</h4>
           <div class="card-header-custom">
             <i class="fas fa-flask"></i>
             <h4 class="section-text-bold">Cardiovascular Research Assistant, University of Pittsburgh</h4>
           </div>
           <p class="section-text">
             February 2024 – May 2024<br>
-            • Conducted experiments for cell culture, immunolabeling, fluorescence imaging, and image processing<br>
-            • Used FlexCell to observe biochemical changes, cell migration and signaling under fluid shear load in vitro<br>
-            • Managed and analyzed patient heart condition data, categorizing over 200 cases based on medical history<br>
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="feature-card">
-        <h4 class="section-title">Work Experience</h4>
-          <div class="card-header-custom">
-            <i class="fas fa-swimmer"></i>
-            <h4 class="section-text-bold">Swim Instructor, Wissahickon Community Aquatic Club</h4>
-          </div>
-          <p class="section-text">
-            March 2022 – August 2023<br>
-            • Coached over 100 hours for children ages 5-13, designing and overseeing swim practices<br>
-            • Organized and led 10+ swim meets and fundraising events, enhancing community engagement and club visibility<br>
-            • Created personalized training plans for 4 distinct groups, enhancing swimmer performance by 20%<br>
-            <br>
-            <br>
+            • Conducted experiments for cell culture, immunolabeling, fluorescence imaging, and image processing.<br>
+            • Used FlexCell to observe biochemical changes, cell migration, and signaling under fluid shear load in vitro.<br>
+            • Managed and analyzed patient heart condition data, categorizing over 200 cases based on medical history.
           </p>
         </div>
       </div>
@@ -167,7 +168,7 @@ no_list: true
     <div class="row">
       <div class="col-lg-4">
         <div class="feature-card">
-        <h4 class="section-title">Leadership Experience</h4>
+          <h4 class="section-title">Leadership Experience</h4>
           <div class="card-header-custom">
             <i class="fas fa-bullhorn"></i>
             <h4 class="section-text-bold">Opportunities Chair, Society for Advancement of Chicanos/Hispanics & Native Americans in Science</h4>
@@ -180,7 +181,7 @@ no_list: true
       </div>
       <div class="col-lg-4">
         <div class="feature-card">
-        <h4 class="section-title">Leadership Experience</h4>
+          <h4 class="section-title">Leadership Experience</h4>
           <div class="card-header-custom">
             <i class="fas fa-chalkboard-teacher"></i>
             <h4 class="section-text-bold">Representative, American Institute of Chemical Engineers</h4>
@@ -194,23 +195,22 @@ no_list: true
           </p>
         </div>
       </div>
-        <div class="col-lg-4">
+      <div class="col-lg-4">
         <div class="feature-card">
-        <h4 class="section-title">Leadership Experience</h4>
+          <h4 class="section-title">Leadership Experience</h4>
           <div class="card-header-custom">
             <i class="fas fa-user-shield"></i>
-            <h4 class="section-text-bold">Vice President, Delta Tau Delta</h4>
+            <h4 class="section-text-bold">Group Leader, Chi Alpha</h4>
           </div>
           <p class="section-text">
-            February 2024 – September 2024<br>
-            • Developed and managed a calendar of activities and events for the chapter, facilitating over 20 events per semester and ensuring efficient planning and execution
+            August 2024 – Present<br>
+            • Led events with 100+ members while mentoring peers, fostering leadership, collaboration, and professional growth
             <br>
             <br>
             <br>
             <br>
           </p>
         </div>
-      </div>
       </div>
     </div>
     <!-- Other Sections -->
@@ -221,11 +221,9 @@ no_list: true
             <h4 class="section-text-bold">Projects and Publications</h4>
           </div>
           <div class="section-content">
-          </div>
-          <div class="section-content">
-            <p><strong>Personal Website | Hugo, HTML, Python, Git</strong><br>
-            June 2024 – Present<br>
-            • Developed a personal website using open-source resources, including Hugo and the Docsy theme from GitHub</p>
+            <p><strong>YOLO Object Detection Project| Python </strong><br>
+            October 2024 – Present<br>
+            • Developed a real-time object detection system using the YOLO model, detecting over 40 types of objects with accuracy and efficiency</p>
             <p><strong>First Year Engineering Conference</strong><br>
             January 2024 – April 2024<br>
             • Authored and delivered a scholarly paper in collaboration with two fellow students, elucidating the application of artificial intelligence within the realm of waste management, with a specific focus on enhancing sustainability practices</p>

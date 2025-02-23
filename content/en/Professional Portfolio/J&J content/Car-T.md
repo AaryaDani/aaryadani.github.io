@@ -1,3 +1,4 @@
+'''
 ---
 date: 2024-06-14
 title: Carvykti
@@ -39,3 +40,4 @@ Carvykti represents a significant advancement in the treatment of multiple myelo
 
 ![Eisenhower Matrix](/images/Carvykti.png)
 
+'''

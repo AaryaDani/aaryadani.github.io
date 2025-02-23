@@ -1,3 +1,4 @@
+'''
 ---
 date: 2024-06-14
 title: Lab Notebook 2
