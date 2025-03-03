@@ -230,7 +230,7 @@ title: Aarya Dani
       <div class="project-content">
         <h3 class="project-title">J&J Internship Experience</h3>
         <p class="project-description">Summary of my internship at Johnson & Johnson, including projects and key learnings.</p>
-        <a href="professional-portfolio/jj-content/jj/" class="project-link">Learn More</a>
+        <a href="professional-portfolio/internship-content/jj/" class="project-link">Learn More</a>
       </div>
     </div>
     <div class="project-item">
