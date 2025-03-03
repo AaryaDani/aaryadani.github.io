@@ -1,4 +1,3 @@
----
 title: Personal Projects
 linkTitle: Personal Projects
 url: "/personal-[projects]/"

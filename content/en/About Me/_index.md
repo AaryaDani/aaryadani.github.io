@@ -15,6 +15,13 @@ no_list: true
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume</title>
   <style>
+      body {
+          opacity: 0;
+          transition: opacity 0.6s ease-in-out;
+      }
+      body.loaded {
+          opacity: 1;
+      }
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -93,7 +100,6 @@ no_list: true
       margin-right: 20px;
     }
   </style>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
@@ -122,7 +128,7 @@ no_list: true
         <div class="feature-card">
           <h4 class="section-title">Work Experience</h4>
           <div class="card-header-custom">
-            <i class="fas fa-vaccine"></i>
+            <i class="fa-solid fa-syringe"></i>
             <h4 class="section-text-bold">Vaccine Manufacturing Co-op, Merck Sharp & Dohme</h4>
           </div>
           <p class="section-text">
@@ -251,3 +257,9 @@ no_list: true
     </div>
 </body>
 </html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.body.classList.add("loaded");
+    });
+</script>
