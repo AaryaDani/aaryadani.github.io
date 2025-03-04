@@ -99,6 +99,22 @@ no_list: true
       border-radius: 0%;
       margin-right: 20px;
     }
+          * {
+      scroll-behavior: smooth;
+      transition: all 0.3s ease;
+    }
+      .feature-card {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+      @media (max-width: 768px) {
+        .col-lg-4 {
+          flex: 0 0 100%;
+        }
+    }
   </style>
 </head>
 <body>
