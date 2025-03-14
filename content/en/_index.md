@@ -303,6 +303,18 @@ title: Aarya Dani
         <a href="professional-portfolio/projects--papers/lab-notebook/" class="project-link">View Project</a>
       </div>
 </div>
+<div class="project-item">
+  <div class="project-image-container">
+    <img src="/images/Retrobowl.png" alt="Retrobowl Project">
+  </div>
+  <div class="project-content">
+    <h3 class="project-title">Retrobowl</h3>
+    <p class="project-description">A coding project modeling a classic game.</p>
+    <a href="personal-projects/retrobowl/" class="project-link">View Project</a>
+  </div>
+</div>
+
+
 
 
 <script>
