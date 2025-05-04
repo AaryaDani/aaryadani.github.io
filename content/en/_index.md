@@ -1,252 +1,372 @@
 ---
 title: Aarya Dani
 ---
-
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body, html {
+    /* Base styles */
+    body {
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+    }
+    body.loaded {
+      opacity: 1;
+    }
+    body {
       margin: 0;
       padding: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
-      color: #111;
-      overflow-x: hidden;
+      font-family: 'Roboto', 'Segoe UI', sans-serif;
+      color: #333;
+      line-height: 1.6;
     }
-    canvas#hero-canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-    }
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-      position: relative;
-      z-index: 1;
-    }
-    .hero img {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #111;
-      margin-bottom: 1.5rem;
-    }
-    .intro-title {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-    .intro-subtitle {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      color: #555;
-    }
-    .btn-primary {
-      padding: 1rem 2rem;
-      background-color: #000;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .btn-primary:hover {
-      background-color: #333;
-    }
+    /* Social buttons with modern styling */
     .social-container {
       display: flex;
       justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    } 
     .btn-social {
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
-      background-color: #f3f3f3;
-      color: #111;
-      display: flex;
+      background-color: white;
+      color: #2d3748;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.25rem;
-      transition: transform 0.3s, background-color 0.3s;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
     }
     .btn-social:hover {
-      transform: scale(1.15);
-      background-color: #e2e2e2;
+      transform: translateY(-5px);
+      box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
     }
+    .btn-linkedin {
+      background-color: #0077b5;
+      color: white;
+    }
+    .btn-youtube {
+      background-color: #ff0000;
+      color: white;
+    }
+    .btn-github {
+      background-color: #333;
+      color: white;
+    }
+    .btn-linkedin:hover,
+    .btn-youtube:hover,
+    .btn-github:hover {
+      background-color: white;
+      color: #2d3748; /* Adjust this to a suitable dark color */
+      border: 1px solid #2d3748; /* Optional: add border for better visibility */
+    }
+    /* Scroll down indicator - Changed color to white */
+    #lead-down {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+      animation: bounce 2s infinite;
+    }
+    #lead-down span {
+      color: white; /* Changed from #2d3748 to white */
+      font-size: 2rem;
+      opacity: 0.9; /* Increased opacity for better visibility */
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-15px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-7px) translateX(-50%);
+      }
+    }
+    /* Projects section - Added transition and initial state */
     .projects {
       padding: 5rem 2rem;
-      background-color: #fafafa;
+      background-color: #f8f9fa;
+      opacity: 0; /* Start invisible */
+      transform: translateY(20px); /* Start below its final position */
+      transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
     }
-    .projects-title {
-      font-size: 2.5rem;
+    .projects.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .projects-header {
       text-align: center;
       margin-bottom: 3rem;
     }
-    .project-grid {
+    .projects-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 1rem;
+    }
+    .projects-subtitle {
+      font-size: 1.1rem;
+      color: #718096;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .project-tab {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
       max-width: 1200px;
       margin: 0 auto;
     }
-    .project-card {
-      background-color: #fff;
-      border-radius: 16px;
+    .project-item {
+      background-color: white;
+      border-radius: 10px;
       overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    .project-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     }
-    .project-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
+    .project-image-container {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
     }
-    .project-card h3 {
-      padding: 1rem;
-      font-weight: 600;
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
+    .project-item img {
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,0.65);
-      justify-content: center;
-      align-items: center;
+      object-fit: cover;
+      transition: transform 0.5s ease;
     }
-    .modal-content {
-      background-color: #fff;
-      color: #000;
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 600px;
-      width: 90%;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    .project-item:hover img {
+      transform: scale(1.1);
     }
-    .close-button {
-      float: right;
-      font-size: 1.5rem;
-      cursor: pointer;
+    .project-content {
+      padding: 1.5rem;
+    } 
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #2d3748;
+    }
+    .project-description {
+      font-size: 0.95rem;
+      color: #718096;
+      margin-bottom: 1rem;
+    }
+    .project-link {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #4299e1;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+    .project-link:hover {
+      background-color: #3182ce;
+    }
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .intro-title {
+        font-size: 2.5rem;
+      }
+      .intro-subtitle {
+        font-size: 1.25rem;
+      }
+      .project-tab {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body>
-  <canvas id="hero-canvas"></canvas>
-  <section class="hero">
-    <img src="/images/Aarya.png" alt="Aarya Dani">
-    <h1 class="intro-title">Aarya Dani</h1>
-    <p class="intro-subtitle">Chemical Engineering @ Pitt • J&J Intern • Merck Co-op</p>
-    <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">View My Work</button>
-    <div class="social-container">
-      <a class="btn-social" href="https://www.linkedin.com/in/aarya-dani-82413b287/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a class="btn-social" href="https://www.youtube.com/channel/UCV9CfYEKDSPeG1FtkOhksqA" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a class="btn-social" href="https://github.com/AaryaDani" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-  </section>
+{{< blocks/cover title="Aarya Dani" image_anchor="top" height="full" >}}
+<p class="lead mt-5">Hello, I am Aarya Dani! I currently attend the University of Pittsburgh, studying chemical engineering. In the summer of 2024, I completed an internship at Johnson & Johnson, where I leveraged my skills to develop Hugo websites that effectively showcase diverse datasets. Drawing from my engineering background, I am passionate about bridging the gap between engineering principles, data science insights, user requirements, and cutting-edge technology. Currently at Merck in their Vaccine Manufacturing Co-Op program, I hope to apply these skills in my future work. </p>
 
-  <section class="projects" id="projects">
-    <h2 class="projects-title">Featured Projects</h2>
-    <div class="project-grid">
-      <div class="project-card" onclick="openModal('jj')">
-        <img src="/images/Johnson & Johnson.png" alt="JJ">
-        <h3>J&J Internship</h3>
-      </div>
-      <div class="project-card" onclick="openModal('pong')">
-        <img src="/images/Pong.png" alt="Pong">
-        <h3>Pong Game</h3>
-      </div>
-    </div>
-  </section>
+<p>Here is some of my contact information:</p>
 
-  <div id="projectModal" class="modal">
-    <div class="modal-content">
-      <span class="close-button" onclick="closeModal()">&times;</span>
-      <div id="modalContent"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 mx-auto text-center">
+      <a class="btn btn-lg btn-social me-3 mb-4 btn-linkedin" href="https://www.linkedin.com/in/aarya-dani-82413b287/" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a class="btn btn-lg btn-social me-3 mb-4 btn-youtube" href="https://www.youtube.com/channel/UCV9CfYEKDSPeG1FtkOhksqA" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a class="btn btn-lg btn-social me-3 mb-4 btn-github" href="https://github.com/AaryaDani" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
+</div>
+{{< /blocks/cover >}}
 
-  <script>
-    function openModal(projectId) {
-      const modal = document.getElementById('projectModal');
-      const content = document.getElementById('modalContent');
-      if (projectId === 'jj') {
-        content.innerHTML = `<h2>J&J Internship</h2><p>Created Hugo-based dashboards for internal data visibility at Johnson & Johnson. Integrated with engineering processes.</p>`;
-      } else if (projectId === 'pong') {
-        content.innerHTML = `<h2>Pong Game</h2><p>A fun recreation of the classic Pong game, with added speed modes and clean JavaScript implementation.</p>`;
-      }
-      modal.style.display = 'flex';
-    }
-    function closeModal() {
-      document.getElementById('projectModal').style.display = 'none';
-    }
-    window.onclick = function(e) {
-      if (e.target === document.getElementById('projectModal')) closeModal();
-    }
+<div id="lead-down">
+  <span>
+    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+  </span>
+</div>
 
-    const canvas = document.getElementById("hero-canvas");
-    const ctx = canvas.getContext("2d");
-    let balls = [];
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+<!-- Projects Section -->
+<div class="projects" id="projects">
+<div class = >
+  <div class="project-tab">
+  <div class="project-item">
+      <div class="project-image-container">
+        <img src="/images/Johnson & Johnson.png" alt="J&J Internship Experience">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">J&J Internship Experience</h3>
+        <p class="project-description">Summary of my internship at Johnson & Johnson, including projects and key learnings.</p>
+        <a href="professional-portfolio/internship-content/jj/" class="project-link">Learn More</a>
+      </div>
+    </div>
+    <div class="project-item">
+      <div class="project-image-container">
+        <img src="/images/Waste.jpg" alt="AI in Waste Management">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">AI in Waste Management</h3>
+        <p class="project-description">Paper regarding the usage of artificial intelligence in waste management.</p>
+        <a href="professional-portfolio/projects--papers/fyec-paper/" class="project-link">View Project</a>
+      </div>
+    </div>
+    <div class="project-item">
+      <div class="project-image-container">
+        <img src="/images/Docsy.png" alt="Website Development">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Website Development</h3>
+        <p class="project-description">Tutorial series on developing a Docsy themed website.</p>
+        <a href="personal-projects/website/" class="project-link">View Project</a>
+      </div>
+    </div>
+        <div class="project-item">
+      <div class="project-image-container">
+        <img src="/images/racist.png" alt="YOLO Object Detection">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">YOLO Object Detection</h3>
+        <p class="project-description">Implementation of real-time object detection using the YOLO (You Only Look Once) algorithm.</p>
+        <a href="personal-projects/yolo/" class="project-link">View Project</a>
+      </div>
+    </div>
+    <div class="project-item">
+      <div class="project-image-container">
+        <img src="/images/Pong.png" alt="Pong">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Pong Game</h3>
+        <p class="project-description">A recreation of the classic Pong game with modern features and gameplay improvements.</p>
+        <a href="personal-projects/pong/" class="project-link">Play Game</a>
+      </div>
+    </div>
+    <div class="project-item">
+      <div class="project-image-container">
+        <img src="/images/Balloon.png" alt="Balloon Project">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Balloon Project</h3>
+        <p class="project-description">An engineering project focused on designing and optimizing balloon-based systems.</p>
+        <a href="professional-portfolio/projects--papers/balloon/" class="project-link">View Project</a>
+      </div>
+    </div>
+        <div class="project-item">
+      <div class="project-image-container">
+        <img src="/images/C++.png" alt"=C++ Final">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">C++ Final Project</h3>
+        <p class="project-description">An engineering project focused on designing and optimizing balloon-based systems.</p>
+        <a href="professional-portfolio/projects--papers/c_final_project/" class="project-link">View Project</a>
+      </div>
+  </div>
+        <div class="project-item">
+      <div class="project-image-container">
+        <img src="/images/Image8.png" alt"=C++ Final">
+      </div>
+  <div class="project-content">
+        <h3 class="project-title">Lab Notebook</h3>
+        <p class="project-description">Engineering projects based on Physics 2 concepts.</p>
+        <a href="professional-portfolio/projects--papers/lab-notebook/" class="project-link">View Project</a>
+      </div>
+</div>
+<div class="project-item">
+  <div class="project-image-container">
+    <img src="/images/Retrobowl.png" alt="Retrobowl Project">
+  </div>
+  <div class="project-content">
+    <h3 class="project-title">Retrobowl</h3>
+    <p class="project-description">A coding project modeling a classic game.</p>
+    <a href="personal-projects/retrobowl/" class="project-link">View Project</a>
+  </div>
+</div>
 
-    class Ball {
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.radius = Math.random() * 4 + 2;
-        this.color = `rgba(0,0,0,${Math.random().toFixed(1)})`;
-        this.dx = (Math.random() - 0.5) * 1.5;
-        this.dy = (Math.random() - 0.5) * 1.5;
-      }
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = this.color;
-        ctx.fill();
-      }
-      update() {
-        this.x += this.dx;
-        this.y += this.dy;
-        if (this.x < 0 || this.x > canvas.width) this.dx *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.dy *= -1;
-        this.draw();
-      }
-    }
 
-    for (let i = 0; i < 75; i++) {
-      balls.push(new Ball());
-    }
 
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      balls.forEach(ball => ball.update());
-      requestAnimationFrame(animate);
-    }
-    animate();
-    window.addEventListener("resize", () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+
+<script>
+
+
+  function handleScroll() {
+    const projectsSection = document.getElementById('projects');
+    const scrollPosition = window.scrollY || window.pageYOffset;
+    
+    // Calculate opacity based on scroll position
+    const opacity = Math.min(scrollPosition / 500, 1); // Adjust 500 to control how quickly it appears
+    projectsSection.style.opacity = opacity;
+    
+    // Update the last scroll position
+    this.lastScrollPosition = scrollPosition;
+  }
+  
+  // Initialize last scroll position
+  let lastScrollPosition = window.scrollY || window.pageYOffset;
+  
+  // Add event listener for scroll
+  window.addEventListener('scroll', handleScroll);
+  
+  // Smooth scroll to projects section when arrow is clicked
+  document.getElementById('lead-down').addEventListener('click', function() {
+    const projectsSection = document.getElementById('projects');
+    window.scrollTo({
+      top: projectsSection.offsetTop,
+      behavior: 'smooth'
     });
-  </script>
-</body>
+  });
+  
+  // Make projects visible when they come into view (optional)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // You might want to remove the opacity transition here
+        // to avoid a jump when the element becomes visible
+        entry.target.style.opacity = 1; 
+      }
+    });
+  }, { threshold: 0.1 }); // 10% of the element is visible
+  
+  observer.observe(document.getElementById('projects'));
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // ... (rest of your existing code) ...
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    document.body.classList.add("loaded");
+  });
+
+
+</script>
