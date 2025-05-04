@@ -124,15 +124,16 @@ no_list: true
       <div class="col-lg-12">
         <div class="feature-card">
           <div class="card-header-custom">
-            <img src="/images/Aarya.jpeg" alt="Aarya Dani" class="profile-pic">
+            <img src="/images/Aarya.png" alt="Aarya Dani" class="profile-pic">
             <div>
               <h4 class="section-text-bold">Contact Information & Education</h4>
               <div class="section-content">
                 <p>Aarya Dani<br>
                 <a href="mailto:AND321@pitt.edu">AND321@pitt.edu</a> | <a href="https://www.linkedin.com/in/aarya-dani" target="_blank">linkedin.com/in/aarya-dani</a> | <a href="https://aaryadani.github.io/" target="_blank">https://aaryadani.github.io/</a></p>
                 <p><strong>University of Pittsburgh - Frederick Honors Program, Pittsburgh, PA</strong><br>
-                Bachelor of Science in Chemical Engineering, August 2023 – Present<br>
-                Relevant Coursework: Honors Calculus 1 & 2, Honors Physics 1, General Chemistry 1 & 2</p>
+                Bachelor of Engineering in Chemical Engineering, August 2023 – Present<br>
+                Minors in Industrial Engineering, Economics, and Chemistry<br>
+                Relevant Coursework: Thermodynamics, Product Design I, Engineering Analysis </p>
               </div>
             </div>
           </div>
@@ -243,7 +244,7 @@ no_list: true
             <h4 class="section-text-bold">Projects and Publications</h4>
           </div>
           <div class="section-content">
-            <p><strong>YOLO Object Detection Project| Python </strong><br>
+            <p><strong>YOLO Object Detection Project | Python </strong><br>
             October 2024 – Present<br>
             • Developed a real-time object detection system using the YOLO model, detecting over 40 types of objects with accuracy and efficiency</p>
             <p><strong>First Year Engineering Conference</strong><br>
