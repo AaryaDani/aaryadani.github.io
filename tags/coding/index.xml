@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coding on Aarya Dani</title>
-    <link>http://localhost:1313/academia/site/tags/coding/</link>
+    <link>https://gethugothemes.com/academia/site/tags/coding/</link>
     <description>Recent content in Coding on Aarya Dani</description>
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
     <lastBuildDate>Sun, 27 Oct 2024 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="http://localhost:1313/academia/site/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://gethugothemes.com/academia/site/tags/coding/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Website Tutorial</title>
-      <link>http://localhost:1313/academia/site/project/website-tutorial/</link>
+      <link>https://gethugothemes.com/academia/site/project/website-tutorial/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/academia/site/project/website-tutorial/</guid>
+      <guid>https://gethugothemes.com/academia/site/project/website-tutorial/</guid>
       <description>&lt;h1 id=&#34;hugo-docsy-and-github&#34;&gt;Hugo, Docsy, and Github&lt;/h1&gt;
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/TmGpbRX0kD4?si=dWkqR2mWh8PlFo6x&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;hr&gt;
@@ -124,7 +124,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h1 id=&#34;adding-content-pages&#34;&gt;Adding Content Pages&lt;/h1&gt;
 &lt;video width=&#34;600&#34; controls&gt;
-  &lt;source src=&#34;http://localhost:1313/academia/site/academia/site/videos/Adding Content Pages.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;source src=&#34;https://gethugothemes.com/academia/site/academia/site/videos/Adding Content Pages.mp4&#34; type=&#34;video/mp4&#34;&gt;
   Your browser does not support the video tag.
 &lt;/video&gt;
 &lt;hr&gt;
@@ -210,10 +210,10 @@ _italic word #2_
     
     <item>
       <title>YOLO Object Detection</title>
-      <link>http://localhost:1313/academia/site/project/yolo/</link>
+      <link>https://gethugothemes.com/academia/site/project/yolo/</link>
       <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/academia/site/project/yolo/</guid>
+      <guid>https://gethugothemes.com/academia/site/project/yolo/</guid>
       <description>&lt;p&gt;Today, we’re leveraging the powerful integration of Roboflow&amp;rsquo;s data services and YOLO’s robust object detection capabilities. This setup allows you to detect various objects in a video stream, such as a live webcam feed, and visualize the detections in real time.&lt;/p&gt;
 &lt;h2 id=&#34;step-1-setting-up-roboflow-and-yolo&#34;&gt;Step 1: Setting Up Roboflow and YOLO&lt;/h2&gt;
 &lt;p&gt;First, ensure that you have the required libraries installed.&lt;/p&gt;
@@ -317,10 +317,10 @@ To use a different YOLOv8 model (e.g., YOLOv8n for a faster but lighter model), 
     
     <item>
       <title>C&#43;&#43; Final Project</title>
-      <link>http://localhost:1313/academia/site/project/c-final/</link>
+      <link>https://gethugothemes.com/academia/site/project/c-final/</link>
       <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/academia/site/project/c-final/</guid>
+      <guid>https://gethugothemes.com/academia/site/project/c-final/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;// &amp;#34;The Use of Artificial Intelligence in Waste Management&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;/*  Our paper goes into detail about waste management and why it&amp;#39;s important.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  *  &lt;span style=&#34;color:#ae81ff&#34;&gt;We then go into detail about the specifics of deep learning, including an &lt;/span&gt;
