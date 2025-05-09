@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/academia/site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=academia/site/livereload" data-no-instant defer></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academia 4.3.1">
+  <meta name="theme-name" content="academia-hugo"/>
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Aarya Dani">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="A guide to using Roboflow and YOLOv8 with Python to create a live object detection system with your webcam.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/academia/site/project/yolo/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#fc6f5c">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/academia/site/css/academia.min.b246554d075350d61b44c126dfbcbe05.css">
+
+  
+
+  
+
+  
+
+  <link rel="manifest" href="/academia/site/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://localhost:1313/academia/site/project/yolo/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Aarya Dani">
+  <meta property="og:url" content="http://localhost:1313/academia/site/project/yolo/">
+  <meta property="og:title" content="YOLO Object Detection | Aarya Dani">
+  <meta property="og:description" content="A guide to using Roboflow and YOLOv8 with Python to create a live object detection system with your webcam."><meta property="og:image" content="http://localhost:1313/academia/site/project/yolo/featured.png">
+  <meta property="twitter:image" content="http://localhost:1313/academia/site/project/yolo/featured.png"><meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2024-10-27T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2024-10-27T00:00:00&#43;00:00">
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>YOLO Object Detection | Aarya Dani</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+    
+    <a class="navbar-brand" href="/academia/site/">Aarya Dani</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/academia/site/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/academia/site/#work-history"><span>Work History</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/academia/site/#extracurriculars"><span>Extracurriculars</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/academia/site/#internship-experiences"><span>Internship Experiences</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/academia/site/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/academia/site/#Publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article article-project py-5" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container split-header">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+        <img class="img-fluid w-100" src="/academia/site/project/yolo/featured_hud30c8fd63d7103a00e0bb36ed31f2796_748529_680x500_fill_q90_lanczos_smart1_3.png" itemprop="image" alt="">
+        
+    </div>
+    <div class="col-lg-8">
+      <h1 itemprop="name">YOLO Object Detection</h1>
+
+      
+
+      
+
+
+
+<meta content="2024-10-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2024-10-27 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Oct 27, 2024</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+
+  
+
+</div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+    </div>
+  </div>
+</div>
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <p>Today, we’re leveraging the powerful integration of Roboflow&rsquo;s data services and YOLO’s robust object detection capabilities. This setup allows you to detect various objects in a video stream, such as a live webcam feed, and visualize the detections in real time.</p>
+<h2 id="step-1-setting-up-roboflow-and-yolo">Step 1: Setting Up Roboflow and YOLO</h2>
+<p>First, ensure that you have the required libraries installed.</p>
+<ol>
+<li>Install Python: Ensure you have Python 3.6 or later installed on your machine. You can download it from python.org. Python 3.13 is not currently supported with PyTorch at this time.</li>
+<li>Install the necessary Python libraries using pip. Open a terminal or command prompt and run the following command: pip install ultralytics opencv-python-headless roboflow</li>
+<li>Set Up Roboflow API Access.
+Create a Roboflow Account: Go to Roboflow and sign up for an account if you don’t already have one.
+Create a Project in Roboflow: After signing in, create a project and upload your dataset. Make sure to annotate the images and prepare the dataset for object detection.
+Get Your API Key: You’ll find your API key in the Roboflow dashboard under Settings &gt; API.</li>
+<li>Download the YOLOv8 Model Weights
+The script assumes you’re using the YOLOv8 small model (yolov8s.pt). You can download this directly from Ultralytics, or if you already have the weights, ensure they are in the same directory as the script.
+To use a different YOLOv8 model (e.g., YOLOv8n for a faster but lighter model), replace &ldquo;yolov8s.pt&rdquo; in the script with the name of the model you want to use.</li>
+</ol>
+<h2 id="step-2-run-the-script">Step 2: Run the script</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ae81ff">Import libraries</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">from ultralytics import YOLO </span> <span style="color:#75715e"># Import YOLO model from Ultralytics</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">import cv2                  </span> <span style="color:#75715e"># Import OpenCV library</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">import math                 </span> <span style="color:#75715e"># Import math module for mathematical operations</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">import roboflow</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Start webcam</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">cap = cv2.VideoCapture(0)    </span> <span style="color:#75715e"># Open </span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">cap.set(3, 640)              </span> <span style="color:#75715e"># Set frame width to 640 pixels</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">cap.set(4, 480)              </span> <span style="color:#75715e"># Set frame height to 480 pixels</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">roboflow.login()</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">rf = roboflow.Roboflow()</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">project = rf.workspace(&#34;yolo-project&#34;).project(&#34;buoy&#34;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">dataset = project.version(5).download(&#34;yolov8&#34;)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">model = YOLO(&#34;yolov8s.pt&#34;) </span> <span style="color:#75715e"># Load the YOLOv8 model</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Define object classes for detection</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">classNames = [&#34;person&#34;, &#34;bicycle&#34;, &#34;car&#34;, &#34;motorbike&#34;, &#34;aeroplane&#34;, &#34;bus&#34;, &#34;train&#34;, &#34;truck&#34;, &#34;boat&#34;,</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;traffic light&#34;</span>, <span style="color:#e6db74">&#34;fire hydrant&#34;</span>, <span style="color:#e6db74">&#34;stop sign&#34;</span>, <span style="color:#e6db74">&#34;parking meter&#34;</span>, <span style="color:#e6db74">&#34;bench&#34;</span>, <span style="color:#e6db74">&#34;bird&#34;</span>, <span style="color:#e6db74">&#34;cat&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;dog&#34;</span>, <span style="color:#e6db74">&#34;horse&#34;</span>, <span style="color:#e6db74">&#34;sheep&#34;</span>, <span style="color:#e6db74">&#34;cow&#34;</span>, <span style="color:#e6db74">&#34;elephant&#34;</span>, <span style="color:#e6db74">&#34;bear&#34;</span>, <span style="color:#e6db74">&#34;zebra&#34;</span>, <span style="color:#e6db74">&#34;giraffe&#34;</span>, <span style="color:#e6db74">&#34;backpack&#34;</span>, <span style="color:#e6db74">&#34;umbrella&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;handbag&#34;</span>, <span style="color:#e6db74">&#34;tie&#34;</span>, <span style="color:#e6db74">&#34;suitcase&#34;</span>, <span style="color:#e6db74">&#34;frisbee&#34;</span>, <span style="color:#e6db74">&#34;skis&#34;</span>, <span style="color:#e6db74">&#34;snowboard&#34;</span>, <span style="color:#e6db74">&#34;sports ball&#34;</span>, <span style="color:#e6db74">&#34;kite&#34;</span>, <span style="color:#e6db74">&#34;baseball bat&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;baseball glove&#34;</span>, <span style="color:#e6db74">&#34;skateboard&#34;</span>, <span style="color:#e6db74">&#34;surfboard&#34;</span>, <span style="color:#e6db74">&#34;tennis racket&#34;</span>, <span style="color:#e6db74">&#34;bottle&#34;</span>, <span style="color:#e6db74">&#34;wine glass&#34;</span>, <span style="color:#e6db74">&#34;cup&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;fork&#34;</span>, <span style="color:#e6db74">&#34;knife&#34;</span>, <span style="color:#e6db74">&#34;spoon&#34;</span>, <span style="color:#e6db74">&#34;bowl&#34;</span>, <span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;apple&#34;</span>, <span style="color:#e6db74">&#34;sandwich&#34;</span>, <span style="color:#e6db74">&#34;orange&#34;</span>, <span style="color:#e6db74">&#34;broccoli&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;carrot&#34;</span>, <span style="color:#e6db74">&#34;hot dog&#34;</span>, <span style="color:#e6db74">&#34;pizza&#34;</span>, <span style="color:#e6db74">&#34;donut&#34;</span>, <span style="color:#e6db74">&#34;cake&#34;</span>, <span style="color:#e6db74">&#34;chair&#34;</span>, <span style="color:#e6db74">&#34;sofa&#34;</span>, <span style="color:#e6db74">&#34;pottedplant&#34;</span>, <span style="color:#e6db74">&#34;bed&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;diningtable&#34;</span>, <span style="color:#e6db74">&#34;toilet&#34;</span>, <span style="color:#e6db74">&#34;tvmonitor&#34;</span>, <span style="color:#e6db74">&#34;laptop&#34;</span>, <span style="color:#e6db74">&#34;mouse&#34;</span>, <span style="color:#e6db74">&#34;remote&#34;</span>, <span style="color:#e6db74">&#34;keyboard&#34;</span>, <span style="color:#e6db74">&#34;cell phone&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;microwave&#34;</span>, <span style="color:#e6db74">&#34;oven&#34;</span>, <span style="color:#e6db74">&#34;toaster&#34;</span>, <span style="color:#e6db74">&#34;sink&#34;</span>, <span style="color:#e6db74">&#34;refrigerator&#34;</span>, <span style="color:#e6db74">&#34;book&#34;</span>, <span style="color:#e6db74">&#34;clock&#34;</span>, <span style="color:#e6db74">&#34;vase&#34;</span>, <span style="color:#e6db74">&#34;scissors&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;teddy bear&#34;</span>, <span style="color:#e6db74">&#34;hair drier&#34;</span>, <span style="color:#e6db74">&#34;toothbrush&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Infinite loop to continuously capture frames from the camera</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">while True</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Read a frame from the camera</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">success, img = cap.read()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Perform object detection using the YOLO model on the captured frame</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">results = model(img, stream=True)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Iterate through the results of object detection</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">for r in results</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">boxes = r.boxes </span> <span style="color:#75715e"># Extract bounding boxes for detected objects</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Iterate through each bounding box</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">for box in boxes</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Extract coordinates of the bounding box</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">x1, y1, x2, y2 = box.xyxy[0]</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2) </span> <span style="color:#75715e"># Convert to integer values</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Calculate and print the confidence score of the detection</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">confidence = math.ceil((box.conf[0]*100))/100</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">print(&#34;Confidence ---&gt;&#34;, confidence)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Draw the bounding box on the frame if confidence is greater than 0.75</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">if(confidence &gt; 0.75)</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#ae81ff">cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 255), 3)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Determine and print the class name of the detected object</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">cls = int(box.cls[0])</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">print(&#34;Class name --&gt;&#34;, classNames[cls])</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Draw text indicating the class name on the frame</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">org = [x1, y1]</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">font = cv2.FONT_HERSHEY_SIMPLEX</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">fontScale = 1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">color = (255, 0, 0)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">thickness = 2</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">if(confidence &gt; 0.75)</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#ae81ff">cv2.putText(img, classNames[cls], org, font, fontScale, color, thickness)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Display the frame with detected objects in a window named &#34;Webcam&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">cv2.imshow(&#39;Webcam&#39;, img)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Check for the &#39;q&#39; key press to exit the loop</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">if cv2.waitKey(1) == ord(&#39;q&#39;)</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Release the camera</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">cap.release()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Close all OpenCV windows</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">cv2.destroyAllWindows()</span>
+</span></span></code></pre></div>
+    </div>
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/academia/site/tags/coding/">Coding</a>
+  
+  <a class="badge badge-light" href="/academia/site/tags/ai/">AI</a>
+  
+</div>
+
+
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    </div>
+
+    
+    
+    
+    </div>
+  </div>
+</article>
+
+
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    
+    <script id="dsq-count-scr" src="//themefisher-template.disqus.com/count.js" async></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/academia/site/js/academia.min.704e00c809a42efab1e3222636150694.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        
+        <p class="mb-0">
+          Copyright © 2025 &middot; 
+ 
+        </p>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-inline network-icon text-right mb-0">
+          
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chemical Engineering on Aarya Dani</title>
+    <link>http://localhost:1313/academia/site/tags/chemical-engineering/</link>
+    <description>Recent content in Chemical Engineering on Aarya Dani</description>
+    <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; {year}</copyright>
+    <lastBuildDate>Wed, 31 Dec 1969 19:33:44 -0500</lastBuildDate>
+    
+	    <atom:link href="http://localhost:1313/academia/site/tags/chemical-engineering/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Balloon Design Project</title>
+      <link>http://localhost:1313/academia/site/project/balloon/</link>
+      <pubDate>Wed, 31 Dec 1969 19:33:44 -0500</pubDate>
+      
+      <guid>http://localhost:1313/academia/site/project/balloon/</guid>
+      <description>&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/1oE-CG6YqRQ?si=4U2zqRJ0bw1srKS9&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;In order to launch the balloon, we had to create a schematic design, a mathematical model, and document our work in a lab report. Attached is a copy of the mathematical model.&lt;/p&gt;
+&lt;iframe 
+    src=&#34;https://docs.google.com/spreadsheets/d/e/2PACX-1vSJGrh7HjwDholzsaHyfsvPEySkQkx9o3v-eKnKtIy1jq3o5TdvgQHzsSJJKlcu4-ObZ8yzI49a5X2M/pubhtml?gid=0&amp;amp;single=true&amp;amp;widget=true&amp;amp;headers=false&#34; 
+    width=&#34;1000&#34; 
+    height=&#34;600&#34;&gt;
+&lt;/iframe&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

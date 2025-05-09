@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on Aarya Dani</title>
+    <link>http://localhost:1313/academia/site/authors/</link>
+    <description>Recent content in Authors on Aarya Dani</description>
+    <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; {year}</copyright>
+    <lastBuildDate>Fri, 16 Aug 2024 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="http://localhost:1313/academia/site/authors/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/academia/site/authors/admin/</link>
+      <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/academia/site/authors/admin/</guid>
+      <description>&lt;p&gt;Hello, I am Aarya Dani! I currently attend the University of Pittsburgh, studying chemical engineering. In the summer of 2024, I completed an internship at Johnson &amp;amp; Johnson, where I leveraged my skills to develop Hugo websites that effectively showcase diverse datasets.&lt;/p&gt;
+&lt;p&gt;Drawing from my engineering background, I am passionate about bridging the gap between engineering principles, data science insights, user requirements, and cutting-edge technology. Currently at Merck in their Vaccine Manufacturing Co-Op program, I hope to apply these skills in my future work.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

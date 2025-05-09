@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Website Tutorial on Aarya Dani</title>
+    <link>http://localhost:1313/academia/site/website/</link>
+    <description>Recent content in Website Tutorial on Aarya Dani</description>
+    <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; {year}</copyright>
+    <lastBuildDate>Thu, 05 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="http://localhost:1313/academia/site/website/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adding Content Pages</title>
+      <link>http://localhost:1313/academia/site/website/example.2/adding_content/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      
+      <guid>http://localhost:1313/academia/site/website/example.2/adding_content/</guid>
+      <description>&lt;video width=&#34;600&#34; controls&gt;
+  &lt;source src=&#34;http://localhost:1313/academia/site/videos/Adding Content Pages.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hugo, Docsy, &amp; GitHub</title>
+      <link>http://localhost:1313/academia/site/website/example/hugo/history/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      
+      <guid>http://localhost:1313/academia/site/website/example/hugo/history/</guid>
+      <description>&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/TmGpbRX0kD4?si=dWkqR2mWh8PlFo6x&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Updating Logo</title>
+      <link>http://localhost:1313/academia/site/website/example/hugo/logo/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      
+      <guid>http://localhost:1313/academia/site/website/example/hugo/logo/</guid>
+      <description>&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/XlIfO7b9zn8?si=G9aJhySG_F_VYCiR&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Overview 2</title>
+      <link>http://localhost:1313/academia/site/website/example.2/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/academia/site/website/example.2/</guid>
+      <description>&lt;h2 id=&#34;flexibility&#34;&gt;Flexibility&lt;/h2&gt;
+&lt;p&gt;This feature can be used for publishing content such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Online courses&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Project or software documentation&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tutorials&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The &lt;code&gt;courses&lt;/code&gt; folder may be renamed. For example, we can rename it to &lt;code&gt;docs&lt;/code&gt; for software/project documentation or &lt;code&gt;tutorials&lt;/code&gt; for creating an online course.&lt;/p&gt;
+&lt;h2 id=&#34;delete-tutorials&#34;&gt;Delete tutorials&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;To remove these pages, delete the &lt;code&gt;courses&lt;/code&gt; folder and see below to delete the associated menu link.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;update-site-menu&#34;&gt;Update site menu&lt;/h2&gt;
+&lt;p&gt;After renaming or deleting the &lt;code&gt;courses&lt;/code&gt; folder, you may wish to update any &lt;code&gt;[[main]]&lt;/code&gt; menu links to it by editing your menu configuration at &lt;code&gt;config/_default/menus.toml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For example, if you delete this folder, you can remove the following from your menu configuration:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[[&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Courses&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;courses/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;weight&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Or, if you are creating a software documentation site, you can rename the &lt;code&gt;courses&lt;/code&gt; folder to &lt;code&gt;docs&lt;/code&gt; and update the associated &lt;em&gt;Courses&lt;/em&gt; menu configuration to:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[[&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Docs&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;docs/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;weight&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;update-the-docs-menu&#34;&gt;Update the docs menu&lt;/h2&gt;
+&lt;p&gt;If you use the &lt;em&gt;docs&lt;/em&gt; layout, note that the name of the menu in the front matter should be in the form &lt;code&gt;[menu.X]&lt;/code&gt; where &lt;code&gt;X&lt;/code&gt; is the folder name. Hence, if you rename the &lt;code&gt;courses/example/&lt;/code&gt; folder, you should also rename the menu definitions in the front matter of files within &lt;code&gt;courses/example/&lt;/code&gt; from &lt;code&gt;[menu.example]&lt;/code&gt; to &lt;code&gt;[menu.&amp;lt;NewFolderName&amp;gt;]&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Markdown Tutorial</title>
+      <link>http://localhost:1313/academia/site/website/example.2/markdown/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/academia/site/website/example.2/markdown/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.markdownguide.org/basic-syntax/&#34;&gt;Markdown Guide!&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;headers&#34;&gt;Headers&lt;/h2&gt;
+&lt;p&gt;Headers are created using &amp;lsquo;#&amp;rsquo; symbols. The number of &amp;lsquo;#&amp;rsquo; symbols determines the level of the header.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# This is a level 1 header
+## This is a level 2 header
+### This is a level 3 header
+#### This is a level 4 header
+##### This is a level 5 header
+###### This is a level 6 header
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:&lt;/p&gt;
+&lt;h1 id=&#34;this-is-a-level-1-header&#34;&gt;This is a level 1 header&lt;/h1&gt;
+&lt;h2 id=&#34;this-is-a-level-2-header&#34;&gt;This is a level 2 header&lt;/h2&gt;
+&lt;h3 id=&#34;this-is-a-level-3-header&#34;&gt;This is a level 3 header&lt;/h3&gt;
+&lt;h4 id=&#34;this-is-a-level-4-header&#34;&gt;This is a level 4 header&lt;/h4&gt;
+&lt;h5 id=&#34;this-is-a-level-5-header&#34;&gt;This is a level 5 header&lt;/h5&gt;
+&lt;h6 id=&#34;this-is-a-level-6-header&#34;&gt;This is a level 6 header&lt;/h6&gt;
+&lt;h2 id=&#34;emphasis&#34;&gt;Emphasis&lt;/h2&gt;
+&lt;p&gt;You can make text &lt;strong&gt;bold&lt;/strong&gt; or &lt;em&gt;italic&lt;/em&gt; using double asterisks or underscores.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;**BOLD WORD #1**
+__BOLD WORD #2__
+ 
+*italic word #1*
+_italic word #2_
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;BOLD WORD #1&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;BOLD WORD #2&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;italic word #1&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;italic word #2&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;p&gt;You can create links by enclosing the link text in square brackets, followed by the URL in parentheses. For example, &lt;a href=&#34;https://www.google.com&#34;&gt;Google&lt;/a&gt; is a link to Google.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[Google](https://www.google.com)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:
+&lt;a href=&#34;https://www.google.com&#34;&gt;Google&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;lists&#34;&gt;Lists&lt;/h2&gt;
+&lt;p&gt;Unordered lists can be created using an asterisk or a hyphen:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;- List one
+  - Nested list one
+ 
+* List two
+  * Nexted list two
+ 
+1. Numbered list
+2. Numbered list
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;List one
+&lt;ul&gt;
+&lt;li&gt;Nested list one&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;List two
+&lt;ul&gt;
+&lt;li&gt;Nexted list two&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;Numbered list&lt;/li&gt;
+&lt;li&gt;Numbered list&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;blockquotes&#34;&gt;Blockquotes&lt;/h2&gt;
+&lt;p&gt;Blockquotes are created using the greater-than symbol (&amp;gt;). Here&amp;rsquo;s an example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt; &amp;#34;Be yourself; everyone else is already taken.&amp;#34; - Oscar Wilde
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Be yourself; everyone else is already taken.&amp;rdquo; - Oscar Wilde&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;horizontal-rule&#34;&gt;Horizontal Rule&lt;/h2&gt;
+&lt;p&gt;You can create a horizontal rule using three hyphens, three asterisks, or three underscores:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;---&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

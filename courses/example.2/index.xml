@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown Tutorial on Aarya Dani</title>
+    <link>http://localhost:1313/academia/site/courses/example.2/</link>
+    <description>Recent content in Markdown Tutorial on Aarya Dani</description>
+    <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; {year}</copyright>
+    <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="http://localhost:1313/academia/site/courses/example.2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adding Content Pages</title>
+      <link>http://localhost:1313/academia/site/courses/example.2/example3/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      
+      <guid>http://localhost:1313/academia/site/courses/example.2/example3/</guid>
+      <description>&lt;video width=&#34;600&#34; controls&gt;
+  &lt;source src=&#34;http://localhost:1313/academia/site/videos/Adding Content Pages.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
