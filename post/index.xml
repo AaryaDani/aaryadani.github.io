@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Aarya Dani</title>
-    <link>https://gethugothemes.com/academia/site/post/</link>
+    <link>http://localhost:1313/academia/site/post/</link>
     <description>Recent content in Posts on Aarya Dani</description>
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
     <lastBuildDate>Fri, 16 Aug 2024 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://gethugothemes.com/academia/site/post/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="http://localhost:1313/academia/site/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Johnson &amp; Johnson</title>
-      <link>https://gethugothemes.com/academia/site/post/jupyter/</link>
+      <link>http://localhost:1313/academia/site/post/jupyter/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://gethugothemes.com/academia/site/post/jupyter/</guid>
+      <guid>http://localhost:1313/academia/site/post/jupyter/</guid>
       <description>&lt;p&gt;During my internship at Johnson &amp;amp; Johnson in the summer of 2024, I supported the GAMEs (Generic Analytic Modeling Engines) team by developing internal websites using Hugo to replace and streamline outdated SharePoint systems. I designed and implemented reusable website   templates that allowed multiple teams to generate consistent, professional sites with minimal setup, improving standardization across the organization. I also built automated pipelines to pull and integrate data from various sources, significantly reducing manual input and the reliance on static SharePoint pages. This not only enhanced data accessibility and clarity, but also improved team workflows by centralizing dynamic content in a modern, user-friendly format. The experience allowed me to apply my chemical engineering and programming background to solve real-world communication and data organization challenges.&lt;/p&gt;
 &lt;p&gt;Attached below is a more in-depth video regarding my specific projects.&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
