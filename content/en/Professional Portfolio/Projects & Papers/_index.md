@@ -5,4 +5,6 @@ cascade:
   - type: "docs"
 description: >
   This section is to put some of the papers and projects that I worked on it my professional career.
+toc_hide: true
+
 ---

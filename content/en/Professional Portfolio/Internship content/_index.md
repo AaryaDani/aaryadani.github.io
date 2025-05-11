@@ -1,5 +1,6 @@
 ---
 title: Internship Content
+toc_hide: true
 type: docs
 weight: 10
 description: >

@@ -13,6 +13,8 @@ resources:
 cascade:
   - type: "docs"
 weight: 1
+toc_hide: true
+
 ---
 
 

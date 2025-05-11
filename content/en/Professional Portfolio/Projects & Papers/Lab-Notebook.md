@@ -12,6 +12,8 @@ resources:
       byline: 
 cascade:
   - type: "docs"
+toc_hide: true
+
 ---
 
 **Laboratory Notebook Index**

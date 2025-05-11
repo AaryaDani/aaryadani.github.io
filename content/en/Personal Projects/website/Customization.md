@@ -7,6 +7,7 @@ date: 2017-01-05
 weight: 1
 cascade:
   - type: "docs"
+toc_hide: true
 ---
  
 [Markdown Guide!](https://www.markdownguide.org/basic-syntax/)

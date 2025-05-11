@@ -236,7 +236,7 @@ title: Aarya Dani
     </div>
     <div class="project-item">
       <div class="project-image-container">
-        <img src="/images/Waste.jpg" alt="AI in Waste Management">
+        <img src="/images/FYEC.png" alt="AI in Waste Management">
       </div>
       <div class="project-content">
         <h3 class="project-title">AI in Waste Management</h3>
@@ -266,24 +266,24 @@ title: Aarya Dani
     </div>
     <div class="project-item">
       <div class="project-image-container">
-        <img src="/images/Pong.png" alt="Pong">
-      </div>
-      <div class="project-content">
-        <h3 class="project-title">Pong Game</h3>
-        <p class="project-description">A recreation of the classic Pong game with modern features and gameplay improvements.</p>
-        <a href="personal-projects/pong/" class="project-link">Play Game</a>
-      </div>
-    </div>
-    <div class="project-item">
-      <div class="project-image-container">
         <img src="/images/Balloon.png" alt="Balloon Project">
       </div>
       <div class="project-content">
         <h3 class="project-title">Balloon Project</h3>
-        <p class="project-description">An engineering project focused on designing and optimizing balloon-based systems.</p>
+        <p class="project-description">An engineering project focused on designing and optimizing heat transfer.</p>
         <a href="professional-portfolio/projects--papers/balloon/" class="project-link">View Project</a>
       </div>
     </div>
+    <div class="project-item">
+  <div class="project-image-container">
+    <img src="/images/ORC.png" alt="ORC">
+  </div>
+  <div class="project-content">
+    <h3 class="project-title">Organic Rankine Cycle</h3>
+    <p class="project-description"> A thermodynamics project regarding the organic rankine cycle. </p>
+    <a href="professional-portfolio/projects--papers/ORC/" class="project-link">View Project</a>
+  </div>
+</div>
         <div class="project-item">
       <div class="project-image-container">
         <img src="/images/C++.png" alt"=C++ Final">
@@ -304,16 +304,16 @@ title: Aarya Dani
         <a href="professional-portfolio/projects--papers/lab-notebook/" class="project-link">View Project</a>
       </div>
 </div>
-<div class="project-item">
-  <div class="project-image-container">
-    <img src="/images/Retrobowl.png" alt="Retrobowl Project">
-  </div>
-  <div class="project-content">
-    <h3 class="project-title">Retrobowl</h3>
-    <p class="project-description">A coding project modeling a classic game.</p>
-    <a href="personal-projects/retrobowl/" class="project-link">View Project</a>
-  </div>
-</div>
+    <div class="project-item">
+      <div class="project-image-container">
+        <img src="/images/Pong.png" alt="Pong">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Pong Game</h3>
+        <p class="project-description">A recreation of the classic Pong game with modern features and gameplay improvements.</p>
+        <a href="personal-projects/pong/" class="project-link">Play Game</a>
+      </div>
+    </div>
 
 
 

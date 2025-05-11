@@ -7,6 +7,7 @@ date: 2017-01-05
 weight: 5
 cascade:
   - type: "docs"
+toc_hide: true
 ---
 
 <video width="600" controls>
