@@ -3,11 +3,6 @@ date: 2024-04-06
 title: ORC Design Project
 linkTitle: ORC Design Project
 author: Aarya Dani 
-resources:
-  - src: 
-    title: 
-    params:
-      byline: 
 cascade:
   - type: "docs"
 weight: 1
