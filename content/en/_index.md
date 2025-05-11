@@ -281,7 +281,7 @@ title: Aarya Dani
   <div class="project-content">
     <h3 class="project-title">Organic Rankine Cycle</h3>
     <p class="project-description"> A thermodynamics project regarding the organic rankine cycle. </p>
-    <a href="professional-portfolio/projects--papers/c_final_project/" class="project-link">View Project</a>
+    <a href="professional-portfolio/projects--papers/Rankine/" class="project-link">View Project</a>
   </div>
 </div>
         <div class="project-item">
