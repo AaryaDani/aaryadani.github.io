@@ -231,7 +231,7 @@ title: Aarya Dani
       <div class="project-content">
         <h3 class="project-title">GES Project Engineer Co-Op</h3>
         <p class="project-description">Summary of my 2nd Co-Op at Merck, including projects and key learnings.</p>
-        <a href="professional-portfolio/internship-content/GES/" class="project-link">Learn More</a>
+        <a href="professional-portfolio/internship-content/ges/" class="project-link">Learn More</a>
       </div>
     </div>
     <div class="project-item">
@@ -241,7 +241,7 @@ title: Aarya Dani
       <div class="project-content">
         <h3 class="project-title">Vaccine Manufacturing Co-Op</h3>
         <p class="project-description">Summary of my 1st Co-Op at Merck, including projects and key learnings.</p>
-        <a href="professional-portfolio/internship-content/LVV/" class="project-link">Learn More</a>
+        <a href="professional-portfolio/internship-content/lvv/" class="project-link">Learn More</a>
       </div>
     </div>
   <div class="project-item">
