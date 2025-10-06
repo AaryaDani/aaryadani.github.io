@@ -193,7 +193,7 @@ title: Aarya Dani
 
 {{< blocks/cover title="Aarya Dani" title_class="red-bold-title" image_anchor="top" height="full" >}}
 
-<p class="lead mt-5">Hello, I am Aarya Dani! I currently attend the University of Pittsburgh, studying chemical engineering. In the summer of 2024, I completed an internship at Johnson & Johnson, where I leveraged my skills to develop Hugo websites that effectively showcase diverse datasets. Drawing from my engineering background, I am passionate about bridging the gap between engineering principles, data science insights, user requirements, and cutting-edge technology. Currently at Merck in their Vaccine Manufacturing Co-Op program, I hope to apply these skills in my future work. </p>
+<p class="lead mt-5">Hello, I am Aarya Dani! I currently attend the University of Pittsburgh, studying chemical engineering. In the summer of 2024, I completed an internship at Johnson & Johnson, where I leveraged my skills to develop Hugo websites that effectively showcase diverse datasets. Drawing from my engineering background, I am passionate about bridging the gap between engineering principles, data science insights, user requirements, and cutting-edge technology. Currently at Merck in their Global Engineering Solutions Co-Op program, I hope to apply these skills in my future work. </p>
 
 <p>Here is some of my contact information:</p>
 
@@ -224,12 +224,32 @@ title: Aarya Dani
 <div class="projects" id="projects">
 <div class = >
   <div class="project-tab">
+    <div class="project-item">
+      <div class="project-image-container">
+        <img src="/images/Merck.png" alt="GES Project Engineer Co-Op Experience">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">GES Project Engineer Co-Op</h3>
+        <p class="project-description">Summary of my 2nd Co-Op at Merck, including projects and key learnings.</p>
+        <a href="professional-portfolio/internship-content/GES/" class="project-link">Learn More</a>
+      </div>
+    </div>
+    <div class="project-item">
+      <div class="project-image-container">
+        <img src="/images/Merck.png" alt="Vaccine Manufacturing Co-Op">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Vaccine Manufacturing Co-Op</h3>
+        <p class="project-description">Summary of my 1st Co-Op at Merck, including projects and key learnings.</p>
+        <a href="professional-portfolio/internship-content/LVV/" class="project-link">Learn More</a>
+      </div>
+    </div>
   <div class="project-item">
       <div class="project-image-container">
         <img src="/images/Johnson & Johnson.png" alt="J&J Internship Experience">
       </div>
       <div class="project-content">
-        <h3 class="project-title">J&J Internship Experience</h3>
+        <h3 class="project-title">Data Engineering Internship</h3>
         <p class="project-description">Summary of my internship at Johnson & Johnson, including projects and key learnings.</p>
         <a href="professional-portfolio/internship-content/jj/" class="project-link">Learn More</a>
       </div>
