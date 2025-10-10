@@ -224,6 +224,16 @@ title: Aarya Dani
 <div class="projects" id="projects">
 <div class = >
   <div class="project-tab">
+  <div class="project-item">
+      <div class="project-image-container">
+        <img src="/images/rb.png" alt="rb">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Retrobowl</h3>
+        <p class="project-description">A version of retrobowl on the computer!.</p>
+        <a href="personal-projects/rb/" class="project-link">Learn More</a>
+      </div>
+    </div>
     <div class="project-item">
       <div class="project-image-container">
         <img src="/images/Merck.png" alt="GES Delivery Co-Op Experience">
