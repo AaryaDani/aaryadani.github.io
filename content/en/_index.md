@@ -224,6 +224,16 @@ title: Aarya Dani
 <div class="projects" id="projects">
 <div class = >
   <div class="project-tab">
+    <div class="project-item">
+      <div class="project-image-container">
+        <img src="/images/Aspirin.png" alt="ASPEN">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Aspirin Production</h3>
+        <p class="project-description">An ASPEN simulation for the production of Aspirin.</p>
+        <a href="professional-portfolio/projects--papers/kinetics/" class="project-link">Learn More</a>
+      </div>
+    </div>
   <div class="project-item">
       <div class="project-image-container">
         <img src="/images/rb.png" alt="rb">

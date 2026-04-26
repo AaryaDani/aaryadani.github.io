@@ -45,3 +45,9 @@ title = "My New Hugo Site"
     name = "Coding Projects"
     url = "/coding-projects/"
     weight = 20
+
+  [markup]
+    [markup.goldmark]
+      [markup.goldmark.renderer]
+        unsafe = true
+
