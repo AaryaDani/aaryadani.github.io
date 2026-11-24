@@ -12,7 +12,7 @@ description: >-
 # Portrait lives in assets/, not static/, so Hugo can resize it.
 # Needs to be at least 760x1000 px -- the layout generates a 2x retina
 # variant at that size, and Hugo will upscale (and soften) anything smaller.
-portrait: images/aarya.png
+portrait: images/Aarya.png
 
 lead: >-
   Senior chemical engineering student graduating in December 2027 with
