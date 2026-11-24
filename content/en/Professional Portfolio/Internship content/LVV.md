@@ -6,7 +6,7 @@ author: Aarya Dani
 toc_hide: true
 weight: 1
 cascade:
-  - type: "docs"
+  - type: "portfolio"
 ---
 
 I had the opportunity to work in Building 50, a brand new state-of-the-art Live Virus Vaccine (LVV) Lyophilization (LYO) filling facility located in West Point, PA that’s transforming how live virus vaccines are formulated and filled. What makes LYO so special, compared to it’s Liquid (LIQ) counterparts, is lyophilization. 

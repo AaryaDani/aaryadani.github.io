@@ -5,5 +5,10 @@
     delimiters: [
       {left: '$$', right: '$$', display: true},
       {left: '$', right: '$', display: false}
-    ]
+    ],
+    // Single '$' is a real inline delimiter on pages like kinetics.md, but it
+    // also matches currency: '$37MM ... $15MM' gets typeset as a formula.
+    // Skip containers that hold prose with dollar figures in it.
+    ignoredClasses: ['about-page'],
+    throwOnError: false
   });"></script>

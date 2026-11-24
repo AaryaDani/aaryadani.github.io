@@ -6,7 +6,7 @@ author: Aarya Dani
 toc_hide: true
 weight: 1
 cascade:
-  - type: "docs"
+  - type: "portfolio"
 ---
 During my engineering co-op with Merck’s Global Engineering Services team, I spent much of my time learning how safety is maintained on large pharmaceutical construction sites. I regularly walked the field to observe construction progress, identify potential hazards, and talk directly with crew members to improve safety in real time. Through safety trainings, reporting practices, and hands-on interaction with contractors, I developed confidence in recognizing both strong safety behaviors and areas that needed attention to ensure everyone onsite could work securely.
 

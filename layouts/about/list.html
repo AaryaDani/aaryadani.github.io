@@ -1,0 +1,153 @@
+{{ define "main" }}
+{{/* Docsy's baseof puts this block inside <div class="row flex-xl-nowrap">,
+     so the top-level element MUST be a Bootstrap column or it collapses to
+     its min-content width. */}}
+<main class="col-12" role="main">
+
+{{ $portrait := "" }}
+{{ with .Params.portrait }}
+  {{ $portrait = resources.Get . }}
+{{ end }}
+
+<article class="about-page">
+
+  <header class="about-hero{{ if not $portrait }} about-hero--no-portrait{{ end }}">
+    <div class="about-hero-text">
+      <h1>{{ .Title }}</h1>
+      <span class="about-rule" aria-hidden="true"></span>
+
+      {{ with .Params.lead }}<p class="about-lead">{{ . }}</p>{{ end }}
+      {{ .Content }}
+
+      {{ with .Params.links }}
+        <div class="about-links">
+          {{ range . }}
+            <a class="{{ if .primary }}about-btn{{ else }}about-link{{ end }}"
+               href="{{ .url }}"{{ if not (hasPrefix .url "/") }} target="_blank" rel="noopener"{{ end }}>
+              {{ .name }}{{ if .arrow }} <span aria-hidden="true">&rarr;</span>{{ end }}
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+
+    {{ with $portrait }}
+      {{ $sm := .Fill "380x500 smart" }}
+      {{ $lg := .Fill "760x1000 smart" }}
+      <img class="about-portrait"
+           src="{{ $sm.RelPermalink }}"
+           srcset="{{ $sm.RelPermalink }} 1x, {{ $lg.RelPermalink }} 2x"
+           width="380" height="500"
+           alt="{{ $.Site.Params.copyright.authors | default $.Title }}">
+    {{ end }}
+  </header>
+
+  {{ range site.Data.timeline.sections }}
+    {{/* Skip sections with no entries -- an empty shell still contributes
+         its margins and leaves a gap on the page. */}}
+    {{ if .entries }}
+    <section class="rsection">
+      <h2 class="rsection-title" data-reveal>{{ .title }}</h2>
+
+      <ol class="rlist">
+        {{ range $i, $e := .entries }}
+          <li class="rentry" data-reveal style="--reveal-delay: {{ mul (mod $i 4) 60 }}ms">
+
+            {{/* Logo tile. Falls back to a monogram when no image is set, so
+                 a missing logo never leaves a blank square. */}}
+            {{ $logo := "" }}
+            {{ with $e.logo }}{{ $logo = resources.Get . }}{{ end }}
+
+            {{ $tileStyle := slice }}
+            {{ with $e.logo_bg }}{{ $tileStyle = $tileStyle | append (printf "--logo-bg: %s" .) }}{{ end }}
+            {{ with $e.mono_color }}{{ $tileStyle = $tileStyle | append (printf "--mono-color: %s" .) }}{{ end }}
+
+            <span class="rlogo"{{ with $tileStyle }} style="{{ delimit . "; " | safeCSS }}"{{ end }} aria-hidden="true">
+              {{ if $logo }}
+                {{ $t := $logo.Fit "112x112" }}
+                <img src="{{ $t.RelPermalink }}" width="56" height="56" alt="" loading="lazy">
+              {{ else }}
+                <span class="rlogo-mono">{{ $e.mono | default (substr $e.org 0 1) }}</span>
+              {{ end }}
+            </span>
+
+            <div class="rbody">
+              <div class="rhead">
+                <h3 class="rorg">{{ $e.org }}</h3>
+                {{ with $e.date }}<span class="rdate">{{ . }}</span>{{ end }}
+              </div>
+
+              {{/* Grouped company: meta lines, then sub-roles on a rail. */}}
+              {{ with $e.meta }}<p class="rmeta">{{ . }}</p>{{ end }}
+              {{ with $e.location }}<p class="rmeta rmeta-dim">{{ . }}</p>{{ end }}
+
+              {{ if or $e.role $e.team }}
+                <p class="rrole">
+                  {{- with $e.role }}{{ . }}{{ end -}}
+                  {{- if and $e.role $e.team }} <span class="rsep">·</span> {{ end -}}
+                  {{- with $e.team }}{{ . }}{{ end -}}
+                </p>
+              {{ end }}
+
+              {{ with $e.bullets }}
+                <ul class="rbullets">
+                  {{ range . }}<li>{{ . }}</li>{{ end }}
+                </ul>
+              {{ end }}
+
+              {{ with $e.roles }}
+                <ol class="rroles">
+                  {{ range . }}
+                    <li class="rrole-item">
+                      <h4 class="rrole-title">{{ .role }}</h4>
+                      <p class="rrole-meta">
+                        {{- .date -}}
+                        {{- with .team }} <span class="rsep">·</span> {{ . }}{{ end -}}
+                      </p>
+                      {{ with .bullets }}
+                        <ul class="rbullets">
+                          {{ range . }}<li>{{ . }}</li>{{ end }}
+                        </ul>
+                      {{ end }}
+                      {{ with .link }}
+                        <a class="rmore" href="{{ . | relURL }}">
+                          Read more <span aria-hidden="true">&rarr;</span>
+                        </a>
+                      {{ end }}
+                    </li>
+                  {{ end }}
+                </ol>
+              {{ end }}
+
+              {{ with $e.link }}
+                <a class="rmore" href="{{ . | relURL }}">
+                  Read more <span aria-hidden="true">&rarr;</span>
+                </a>
+              {{ end }}
+            </div>
+          </li>
+        {{ end }}
+      </ol>
+    </section>
+    {{ end }}
+  {{ end }}
+
+  {{ with .Params.skills }}
+    <section class="rsection about-skills">
+      <h2 class="rsection-title" data-reveal>Skills &amp; Certifications</h2>
+      <dl data-reveal>
+        {{ range . }}
+          <div>
+            <dt>{{ .group }}</dt>
+            <dd>
+              <ul>{{ range .items }}<li>{{ . }}</li>{{ end }}</ul>
+            </dd>
+          </div>
+        {{ end }}
+      </dl>
+    </section>
+  {{ end }}
+
+</article>
+</main>
+{{ end }}

@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{/* Docsy's baseof puts this block inside <div class="row flex-xl-nowrap">,
+     so the top-level element must be a Bootstrap column. Because this type
+     isn't "docs", Docsy's sidebar and breadcrumb partials never run. */}}
+<main class="col-12" role="main">
+  <article class="portfolio-page">
+
+    <a class="back-link" href="{{ "/about-me/" | relURL }}">
+      <span aria-hidden="true">&larr;</span> Back to About Me
+    </a>
+
+    <h1 class="portfolio-title">{{ .Title }}</h1>
+
+    <div class="portfolio-body">
+      {{ .Content }}
+    </div>
+
+  </article>
+</main>
+{{ end }}

@@ -1,0 +1,101 @@
+# Content for the About Me page.
+#
+# Sections render in the order written here; entries within a section likewise.
+#
+# Per entry:
+#   org      (required) organisation or project name, shown bold
+#   date     (required) right-aligned, e.g. "May–Aug 2025"
+#   role     subtitle, shown before the dot
+#   team     subtitle, shown after the dot
+#   bullets  list of achievements
+#   link     optional "Read more" target
+#   logo     path under assets/ -- only square SYMBOL marks work here.
+#            Wordmarks shrink to illegibility; use `mono` instead.
+#   logo_bg  hex background for the tile
+#   mono     1-3 character fallback shown when no logo is set
+#   roles    list of sub-positions at the same org, rendered on a connector
+#            rail (LinkedIn style). Each takes role / date / team / bullets /
+#            link. Use instead of a top-level role+bullets.
+#   mono_color text colour for that fallback (default white)
+
+sections:
+  - title: Experience
+    entries:
+      # Grouped company: `roles` holds the sub-positions, each on the rail.
+      - org: Merck
+        date: "May 2025–Aug 2026"
+        meta: "Internships & Co-Ops · 1 yr"
+        location: "West Point, PA · On-site"
+        logo: images/logos/merck.png
+        logo_bg: "#ffffff"
+        mono: M
+        roles:
+          - role: Manufacturing Science & Technology Intern
+            date: "Anticipated Start Date: June 2027"
+            bullets: []
+
+          - role: Process Engineering Intern
+            date: "May 2026 – Aug 2026"
+            team: Global Engineering Solutions
+            bullets:
+              - "Authored the User Requirement Specification for material handling, milling, and blending systems on a $450MM oral solid dose facility, aligning cross-functional stakeholders on quality criteria for equipment procurement."
+              - "Facilitated root cause analysis for an electrical safety incident, restoring operational readiness in classified areas and closing all 30+ associated punchlist items."
+              - "Determined worst-case wash-room occupancy by modelling container flow across four parallel production modules, informing changeover process and room-sizing decisions."
+              - "Supported qualification of formulation tanks against GES design standards, preparing for CQV protocol execution with process SMEs."
+            link: "/professional-portfolio/internship-content/gesprocess/"
+
+          - role: Project Engineer Co-op
+            date: "Sep 2025 – Dec 2025"
+            team: Global Engineering Solutions
+            bullets:
+              - "Supported a $30MM+ technical transfer, including process redesign from stainless steel to single-use systems and definition of the project governance framework."
+              - "Quantified $2.5MM in projected savings, a two-month schedule delay avoided, and 100+ EHS risks reduced by building an impact log that measured Cost of Quality through Monte Carlo assessments."
+              - "Streamlined five capital projects: cut 1MM+ vials used in testing, updated a $37MM vendor cost estimate, led a $15MM facility layout review, executed loop checks, and ran the After Action Review."
+              - "Redesigned global Inspection Test Plans by revising industry codes to strengthen inspection compliance and align with engineering standards."
+            link: "/professional-portfolio/internship-content/ges/"
+
+          - role: Vaccine Manufacturing Operations Co-op
+            date: "May 2025 – Aug 2025"
+            bullets:
+              - "Designed a line-speed modeling tool spanning $500MM+ of vial filling operations, enabling data-driven decisions on equipment qualification, downtime, and capacity."
+              - "Identified 40+ KPIs and validated virus Time-in-Solution assumptions by developing a changeover process flow diagram and checklist through value stream mapping."
+              - "Procured $224,000 in wireless MES and DeltaV-enabled mobile workstations for a new cGMP facility, leading vendor selection and consolidating stakeholder requirements."
+              - "Improved fixed-BIN storage utilization to enable just-in-time replenishment by analyzing inventory data and redesigning the replenishment framework."
+            link: "/professional-portfolio/internship-content/lvv/"
+
+      - org: Johnson & Johnson
+        date: "Jun–Aug 2024"
+        role: Data Engineering Intern
+        team: Raritan, NJ
+        mono: "J&J"
+        logo_bg: "#d51900"
+        bullets:
+          - "Standardized data across 40+ drug products and 15+ analytical parameters by architecting a scalable, metadata-driven data dictionary for the Biological Regulatory & Quality Compliance team."
+          - "Enabled real-time insights supporting CAR-T commercial scalability by rebuilding and improving R-based analytics."
+          - "Reached 3,000+ views with a tutorial series guiding users on web-based content-development tools."
+        link: "/professional-portfolio/internship-content/jj/"
+
+      - org: University of Pittsburgh
+        date: "Feb–May 2024"
+        role: Cardiovascular Research Assistant
+        team: Phillippi Lab · UPMC
+        logo: images/logos/pitt.png
+        logo_bg: "#ffffff"
+        mono: P
+        bullets:
+          - "Identified candidate therapeutic targets in cardiovascular tissue models through mammalian cell culture, multiplex immunolabeling, and high-throughput fluorescence imaging."
+          - "Modeled physiologically relevant fluid shear stress on FlexCell bioreactor systems to generate insights into endothelial migration and vascular remodeling."
+          - "Analyzed clinical datasets from 200+ cardiovascular patients to support patient research decisions."
+
+  - title: Education
+    entries:
+      - org: University of Pittsburgh
+        date: "Aug 2023–Dec 2027"
+        role: B.S.E. Chemical Engineering
+        team: Frederick Honors College
+        logo: images/logos/pitt.png
+        logo_bg: "#ffffff"
+        mono: P
+        bullets:
+          - "Minors: Bioengineering & Chemistry"
+          - "Relevant coursework: Reactive Process Engineering, Product Design I, Medical Product Regulation."

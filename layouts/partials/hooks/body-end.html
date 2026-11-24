@@ -1,0 +1,74 @@
+{{/* Homepage scroll behaviour + card reveal.
+     - .td-cover-block : hero is pinned by CSS; this fades its text out as
+                         the project grid scrolls up over it.
+     - .project-item   : cards fade in individually, staggered per row.
+     - [data-reveal]   : About page sections. */}}
+<script>
+(function () {
+  document.documentElement.classList.remove('no-js');
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---- Hero fade -----------------------------------------------------------
+  var cover = document.querySelector('.td-cover-block');
+
+  if (cover && !reduced) {
+    var ticking = false;
+
+    var updateCover = function () {
+      // Fully faded by the time one screen-height has scrolled past.
+      var span = window.innerHeight * 0.75;
+      var p = Math.min(1, Math.max(0, window.pageYOffset / span));
+      // Keep a trace of the text rather than going fully blank.
+      cover.style.setProperty('--cover-fade', (1 - p * 0.85).toFixed(3));
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(updateCover);
+      }
+    }, { passive: true });
+
+    window.addEventListener('resize', updateCover, { passive: true });
+    updateCover();
+  }
+
+  // ---- Reveal on scroll ----------------------------------------------------
+  var groups = [
+    { nodes: document.querySelectorAll('[data-reveal]'), stagger: 0 },
+    { nodes: document.querySelectorAll('.project-item'), stagger: 80 }
+  ];
+
+  if (reduced || !('IntersectionObserver' in window)) {
+    groups.forEach(function (g) {
+      Array.prototype.forEach.call(g.nodes, function (el) {
+        el.classList.add('is-revealed');
+      });
+    });
+    return;
+  }
+
+  groups.forEach(function (g) {
+    if (!g.nodes.length) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries
+        .filter(function (e) { return e.isIntersecting; })
+        .sort(function (a, b) {
+          return a.target.compareDocumentPosition(b.target) & 2 ? 1 : -1;
+        })
+        .forEach(function (entry, i) {
+          if (g.stagger) {
+            entry.target.style.setProperty('--reveal-delay', (i * g.stagger) + 'ms');
+          }
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        });
+    }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
+
+    Array.prototype.forEach.call(g.nodes, function (el) { observer.observe(el); });
+  });
+})();
+</script>

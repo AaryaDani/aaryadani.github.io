@@ -1,0 +1,34 @@
+{{ define "main" }}
+<main class="col-12" role="main">
+  <article class="portfolio-page">
+
+    <a class="back-link" href="{{ "/about-me/" | relURL }}">
+      <span aria-hidden="true">&larr;</span> Back to About Me
+    </a>
+
+    <h1 class="portfolio-title">{{ .Title }}</h1>
+
+    {{ with .Description }}
+      <p class="portfolio-lead">{{ . }}</p>
+    {{ end }}
+
+    <div class="portfolio-body">
+      {{ .Content }}
+    </div>
+
+    {{ with .Pages }}
+      <ul class="portfolio-children">
+        {{ range .ByWeight }}
+          <li>
+            <a href="{{ .RelPermalink }}">
+              <span class="portfolio-child-title">{{ .LinkTitle }}</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+
+  </article>
+</main>
+{{ end }}
